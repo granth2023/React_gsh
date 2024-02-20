@@ -25,7 +25,37 @@ function App() {
   const navigate = useNavigate()
 
   const handleNavigation = (path) => { 
-    return new Promise((resolve))
-  }
+    return new Promise((resolve) => {
+      window.scrollTo({
+        top: 0, 
+        behavior: 'smooth'
+      });
+
+      setTimeout(() => {
+        resolve();
+    }, 500);
+  }).then(() => {
+    navigate(path);
+  });
+  };
+
+  return (
+    <div className="App" style={{ position: 'relative', zIndex: 1 }}>
+      <Bg modeToggle={modeToggle} />
+      <Nav modeToggle={modeToggle} setModeToggle={setModeToggle} handleNavigation={handleNavigation} pColor={pColor}/>
+      <Routes>
+
+
+
+
+
+      </Routes>
+
+
+
+
+    </div>
+  )
+}
 
 export default App;
