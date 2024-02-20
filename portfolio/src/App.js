@@ -10,24 +10,22 @@ import React, { useState, useEffect } from 'react'
 
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+  const [modeToggle, setModeToggle] = useState(false);
+  const [pColor, setPColor] = useState('#101457');
+
+  useEffect(() => {
+    if(modeToggle ){
+      setPColor('#F7B69F');
+    } else {
+      setPColor('#101457');
+    }
+  }, [modeToggle]);
+
+  const navigate = useNavigate()
+
+  const handleNavigation = (path) => { 
+    return new Promise((resolve))
+  }
 
 export default App;
