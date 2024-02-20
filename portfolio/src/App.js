@@ -1,5 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+import { Route, Routes, useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+
+
+
 
 function App() {
   return (
