@@ -4,4 +4,6 @@ import { useNavigate } from 'react-router-dom'
 import { gsap } from 'gsap'
 import userEvent from '@testing-library/user-event'
 
-function 
+function SelectedWork({ modeToggle, pColor, handleNavgiation}){
+    
+}
