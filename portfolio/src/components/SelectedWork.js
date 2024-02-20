@@ -5,5 +5,6 @@ import { gsap } from 'gsap'
 import userEvent from '@testing-library/user-event'
 
 function SelectedWork({ modeToggle, pColor, handleNavgiation}){
-    
+        const workRef = useRef(null);
+        const [isInView, setIsInView] = useState(false);
 }
