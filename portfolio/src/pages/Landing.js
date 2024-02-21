@@ -19,13 +19,17 @@ useEffect(() => {
 
 
 
-        
+
     })
 
 }, []); 
 
 
 useEffect(() => {
+
+
+gsap.set( {})
+
 
 }, []); 
 
