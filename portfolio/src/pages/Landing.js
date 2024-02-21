@@ -31,7 +31,7 @@ useEffect(() => {
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-                
+
             })
         }
     )
@@ -44,5 +44,24 @@ gsap.set( {})
 
 
 }
+return ( 
+ 
 
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <SelectedWork
+        ref={workRef}
+        pColor={pColor}
+        handleNavigation={handleNavigation}
+        modeToggle={modeToggle}
+        ></SelectedWork>
+        <Contact modeToggle={modeToggle} pColor={pColor}></Contact>
+        </div>
+)
+}
 export default Landing;
