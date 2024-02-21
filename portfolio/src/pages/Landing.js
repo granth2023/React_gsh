@@ -85,19 +85,55 @@ return (
                 <h1 style={{ opacity: 0}} className="font-higuen">
                     Seth 
                 </h1>
-                <h1 style={{ opacity: 0}} className="font-higuen">
-                    Harris 
-                </h1>
+               
+                <div style ={{ opacity: 0 }} className="flex justify-center">
+                    {mdoeToggle ? ( 
+                        <SiteHyphenLg2 className="w-14 sm:w-32 lg:w-40 mb-2 mr-4" />
+                    ) : (
+                        <SiteHyphenLg className="w-14 sm:w-32 lg:w-40 mb-2 mr-4" />                   
+                    )}
+                    <div>
+                        <h1 className="font-higuen"> Harris</h1>
+                    </div>
+                    </div><div ref={landingRef}
+                        style={{ opacity: 0 }}
+                        className="flex text-left justify-between font-aktiv pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
+                    >
+                        <div className='w-full'>
+                        <div className="flex justify-between md:justify-around">
+                        <div className="flex flex-col">
+                        <div className="flex flex-col font-bold">
+                        <h2>Writer</h2>
+                        <h2>Director</h2>
+                </div>
+                        <p className=" pt-8 text-xs sm:tex-sm text-left font-aktiv w-40 sm:w-80">
+                            answers
 
-        </div>
+                        </p>
+            </div>
+            <div className="flex felx-col mr-6 items-center justify-center">     
+                {modeToggle ? (
+                    <SiteScroll2 className="w-24 2xl:w-28 animate-slowspin site-scroll"/>
+                ): (
+                    <SiteScroll className="w-24 2xl:w-28 animate-slowspin site-scroll"/>
+                    )}
+                    <div>
+                        {modeToggle ?(
+                            <SiteDownArrow2 className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4"/>
+                        ) :(
+                            <SiteDownArrow className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4"/>
+                        )}
+                        
+                        
+                   
  
 
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <SelectedWork
         ref={workRef}
