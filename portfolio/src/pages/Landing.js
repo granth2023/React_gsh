@@ -31,9 +31,12 @@ useEffect(() => {
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-
+            
             })
-        }
+                observer.unobserve(entry.target)
+            }
+        })
+        },
         {
             root: null, 
             rootMargin: '0px',
