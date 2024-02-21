@@ -29,7 +29,11 @@ useEffect(() => {
 useEffect(() => {
     const elements = landingRef.current.children
     const observer = new IntersectionObserver(
-        
+        (entries) => {
+            entries.forEach((entry) => {
+                
+            })
+        }
     )
 
 
