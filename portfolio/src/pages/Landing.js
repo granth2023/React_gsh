@@ -37,8 +37,11 @@ useEffect(() => {
     )
 
 
-gsap.set( {})
+gsap.set(elements, {y: 20, autoAlpha: 0})
 
+Array.from(elements).forEach((element) => {
+    observer.observe(element)
+})
 
 }, []); 
 
