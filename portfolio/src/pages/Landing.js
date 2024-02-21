@@ -43,6 +43,12 @@ Array.from(elements).forEach((element) => {
     observer.observe(element)
 })
 
+return () => {
+    Array.from(elements).forEach((element) => {
+        observer.unobserve(element)
+    })
+}
+
 }, []); 
 
 
