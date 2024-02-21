@@ -12,8 +12,7 @@ function Landing ({ modeToggle, pColor, handleNavigation}) {
 
 useEffect(() => { 
     const elements = headerRef.current.children 
-    
-    gsap.set()
+    gsap.set(elements, {y:20, autoAlpha: 0})
 
 
     gsap.to ( {
