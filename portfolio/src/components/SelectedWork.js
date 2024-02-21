@@ -24,7 +24,13 @@ function SelectedWork({ modeToggle, pColor, handleNavgiation}){
                 if( workRef.current) {
                     observer.observe(workRef.current);
                 }
-                
+
+                return () =>{
+                    if (workRef.current) {
+                        observer.unobserve(workRef.current);
+                    }
+                }
+
             )
         })
 }
