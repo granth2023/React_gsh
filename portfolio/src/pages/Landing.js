@@ -31,7 +31,15 @@ useEffect(() => {
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-            
+
+                if(entry.isIntersecting) {
+                gsap.to(entry.target, {
+                    y: 0,
+                    autoAlpha: 1,
+                    stagger: 0.8,
+                    duration: 1,
+                    ease: 'easeInOut',
+                    overwrite: 'auto'
             })
                 observer.unobserve(entry.target)
             }
