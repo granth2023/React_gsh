@@ -29,7 +29,13 @@ function SelectedWork({ modeToggle, pColor, handleNavgiation}){
                     if (workRef.current) {
                         observer.unobserve(workRef.current);
                     }
-                }
+                };
+            }, []);
+
+                useEffect(() => {
+                    if (isInView && !hasAnimated.current) {
+                        const elements = workRef.current.children;
+                        gsap.set(elements, { x: '100%', autoAlpha: 0 });
 
             )
         })
