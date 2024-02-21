@@ -8,8 +8,19 @@ function Landing ({ modeToggle, pColor, handleNavigation}) {
     const landingRef = useRef(null)
     const headerRef = useRef(null)
     const workRef = useRef(null)
+
+
 useEffect(() => { 
     
+    gsap.set()
+
+
+    gsap.to ( {
+
+
+
+        
+    })
 
 }, []); 
 
