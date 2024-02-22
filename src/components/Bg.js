@@ -8,6 +8,19 @@ function Bg({ modeToggle }) {
     const [directions, setDirections] = useState(new Array(12).fill(true))
 
     useEffect(() => {
-        
+        const interval = setInterval(() => {
+            setHues((prevHues) => {
+                return prevHues.map((hue, index) => {
+                    if(directions[index] && hue < 75) {
+                        return hue + 1
+                    } else if (!direcitons[index] && hue > 0){
+                        return hue - 1
+                    } else if (hue === 75)}
+                    setDirections((prev) => {
+                        const newDirections = [...prev]
+                    }))
+            })
+        }
+
     }
 }
