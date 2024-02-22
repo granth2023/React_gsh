@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
+import Nav from './components/Nav'
 
 
 
@@ -41,10 +42,10 @@ function App() {
 
   return (
     <div className="App" style={{ position: 'relative', zIndex: 1 }}>
-      <Bg modeToggle={modeToggle} />
+      {/* <Bg modeToggle={modeToggle} /> */}
       <Nav modeToggle={modeToggle} setModeToggle={setModeToggle} handleNavigation={handleNavigation} pColor={pColor}/>
       <Routes>
-
+      
 
 
 

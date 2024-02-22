@@ -87,11 +87,7 @@ return (
                 </h1>
                
                 <div style ={{ opacity: 0 }} className="flex justify-center">
-                    {mdoeToggle ? ( 
-                        <SiteHyphenLg2 className="w-14 sm:w-32 lg:w-40 mb-2 mr-4" />
-                    ) : (
-                        <SiteHyphenLg className="w-14 sm:w-32 lg:w-40 mb-2 mr-4" />                   
-                    )}
+                   
                     <div>
                         <h1 className="font-higuen"> Harris</h1>
                     </div>

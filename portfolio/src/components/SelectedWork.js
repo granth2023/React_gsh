@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom'
-// import { ReactComponent as SiteHyphen } from 'assests' 
+
 import { gsap } from 'gsap'
 import userEvent from '@testing-library/user-event'
 
@@ -8,10 +8,10 @@ function SelectedWork({ modeToggle, pColor, handleNavgiation}){
         const workRef = useRef(null);
         const [isInView, setIsInView] = useState(false);
         const hasAnimated = useRef(false);
+        const navigate = useNavigate();
 
         useEffect(() => {
-            const observer = new IntersectionObserver(
-                ([entry] => {
+            const observer = new IntersectionObserver(([entry]) => {
                     setIsInView(entry.isIntersecting);
                 },
                 {
@@ -46,19 +46,23 @@ function SelectedWork({ modeToggle, pColor, handleNavgiation}){
                             overwrite: 'auto',
                         });
 
-                        hasAnimated.current - true;
+                        hasAnimated.current = true;
                     }
                 }, [isInView]);
 
+                const handleItemClick = (path) => {
+                    navigate(path);
+                }
+
                 return ( 
-                    <div classname="mt-40 lg:mt-64">
+                    <div className="mt-40 lg:mt-64">
                         <div className="flex justify-between"> 
                             <h2 className="font-aktiv font-bold text-lg sm:text-2xl">Selected Work</h2>
-                            {modetoggle ? <SiteHyphen2 className="ml-3 mt-3 h-2 sm:h-3" />: <SiteHyphen className="ml-3 mt-3 h-2 sm:h-3" />}
+                           
                          </div>
                          <ul className='font-higuen text-3xl sm:text-5xl' ref={workRef}>
                             <li 
-                                onClick={() => handdleNavigation('/Americamp')}
+                                onClick={() => handleItemClick('/Americamp')}
                                 style={{
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
@@ -68,7 +72,7 @@ function SelectedWork({ modeToggle, pColor, handleNavgiation}){
                                 Americamp (WIP)
                             </li>
                             <li 
-                                onClick ={() => handdleNavigation('/Deerkill Park')}
+                                onClick ={() => handleItemClick('/Deerkill Park')}
                                 style={{
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
@@ -78,7 +82,7 @@ function SelectedWork({ modeToggle, pColor, handleNavgiation}){
                                 Deerkill Park (WIP)
                             </li>
                             <li 
-                                onClick ={() => handdleNavigation('/Safecracker')}
+                                onClick ={() => handleItemClick('/Safecracker')}
                                 style={{
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
@@ -88,7 +92,7 @@ function SelectedWork({ modeToggle, pColor, handleNavgiation}){
                                 Safecracker (WIP)
                             </li>
                             <li 
-                                onClick ={() => handdleNavigation('/WandoSlimLightWithin')}
+                                onClick ={() => handleItemClick('/WandoSlimLightWithin')}
                                 style={{
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 

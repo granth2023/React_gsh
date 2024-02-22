@@ -11,7 +11,7 @@ function Nav ({
     pColor,
     handleNavigation 
 }) {
-    const navigate =useNavigate();
+    const navigate = useNavigate();
 
     return ( 
         <div> 
@@ -21,21 +21,13 @@ function Nav ({
                     borderBottom: `1px solid ${pColor}`,
                 }}
             >
-                {modetoggle ? ( 
-                    <SiteLogo2
-                        onClick={() => { 
-                            handleNavigation('/');
-                        }}
-                        className='site-logo h-4 cursor-pointer'
-                    />
-                )}
-                    <DarkSwitch   
+                                    <DarkSwitch   
                         modeToggle={modeToggle}
                         setModeToggle={setModeToggle}
                         pColor={pColor}
                     />
             </div>
         </div>
-    );
-}
+                )    }
+                
 export default Nav;
