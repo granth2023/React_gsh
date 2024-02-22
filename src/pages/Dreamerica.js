@@ -25,7 +25,19 @@ function Dreamerica ({ modeToggle, pColor, handleNavigation}) {
 return (
 
 
-
+    )}
+        <h2>Home&emsp;</h2>
+    <div onClick={() => handleNavigation('/deerkillpark')} className='flex cursor-pointer'>
+        <h2>&emsp;Next</h2>
+        {modeToggle ? (
+            <SideArrow2 className="h-10 mt-4 ml-2 rotate-180"/>
+) : ( 
+            <SideArrow className="h-10 mt-4 ml-2 rotate-180"/>
+)}
+            </div>
+        </div>
+    </div>
+</div>
 )
 }
 
