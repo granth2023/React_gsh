@@ -123,11 +123,6 @@ return (
                         ) :(
                             <SiteDownArrow className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4"/>
                         )}
-                        
-                        
-                   
- 
-
                              </div>
                         </div>
                     </div>
@@ -144,5 +139,5 @@ return (
         <Contact modeToggle={modeToggle} pColor={pColor}></Contact>
         </div>
 )
-}
+
 export default Landing;

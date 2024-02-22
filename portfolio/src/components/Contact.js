@@ -88,4 +88,4 @@ function Contact({ modetoggle, pColor }) {
         )
         }
 
-        export default Contact 
+export default Contact 
