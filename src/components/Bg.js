@@ -18,9 +18,22 @@ function Bg({ modeToggle }) {
                     } else if (hue === 75)}
                     setDirections((prev) => {
                         const newDirections = [...prev]
-                    }))
-            })
+                        newDirections[index] = false 
+                        return newDirections
+                    })
+                    return hue -1 
+                } else if (hue === 0){
+                    setDirections((prev) => {
+                        const newDirections = [...prev]
+                        newDirections[index] = true
+                        return newDirections 
+                    })
+                    return hue + 1
+                } else { 
+                
+                    return hue
         }
+    })
+            })
+        }, 55)
 
-    }
-}
