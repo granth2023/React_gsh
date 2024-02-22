@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { gsap} from 'gsap';
 
 function Dreamerica ({ modeToggle, pColor, handleNavigation}) {
-
+    const navigate = useNavigate()
+    const childrenRef = useRef(null)
 
 
     useEffect(() => {
@@ -19,4 +20,9 @@ function Dreamerica ({ modeToggle, pColor, handleNavigation}) {
             ease: 'easeInOut',
             overwrite: 'auto'
         })
-}, []);
+}, [])
+
+return (
+
+    
+)
