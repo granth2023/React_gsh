@@ -24,5 +24,9 @@ function Dreamerica ({ modeToggle, pColor, handleNavigation}) {
 
 return (
 
-    
+
+
 )
+}
+
+export default Dreamerica 
