@@ -16,7 +16,7 @@ function Bg({ modeToggle }) {
                         return hue + 1
                     } else if (!direcitons[index] && hue > 0){
                         return hue - 1
-                    } else if (hue === 75)}
+                    } else if (hue === 75){
                     setDirections((prev) => {
                         const newDirections = [...prev]
                         newDirections[index] = false 
@@ -31,7 +31,6 @@ function Bg({ modeToggle }) {
                     })
                     return hue + 1
                 } else { 
-                
                     return hue
                 }
         })
@@ -114,6 +113,20 @@ function Bg({ modeToggle }) {
                   },100%,80%,1) 0px, transparent 50%)`
                 }}
               />
-
+              <div 
+              id="overlayImageContainer"
+              className="h-full w-full"
+              style={{
+                position: 'fixed',
+                backgroundImage: `url(${noiseTexture})`,
+                backgroundBlendMode: 'multiply',
+                opacity: '50%',
+                backgroundRepeat: 'reapeat',
+                backgroundSize: '40px 40px'
+              }}
+              />
         </div>
     )
+            } 
+
+    export default Bg 
