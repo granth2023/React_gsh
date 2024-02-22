@@ -3,20 +3,23 @@ import './App.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import Bg from './components/Bg'
 import Nav from './components/Nav'
-import React, { useState, useEffect } from 'react'
+import Landing from './pages/Landing';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import React, { useRef, useState, useEffect } from 'react'
+
 
 function App() {
 
   const [modeToggle, setModeToggle] = useState(false);
-  const [pColor, setPColor] = useState('#101457');
+  const [pColor, setPColor] = useState('#FFFFFF');
 
   useEffect(() => {
     if (modeToggle) {
       setPColor('#F7B69F');
     } else {
-      setPColor('#101457');
+      setPColor('#FFFFFF');
     }
   }, [modeToggle]);
 
@@ -41,6 +44,9 @@ function App() {
     <div className="App" style={{ position: 'relative', zIndex: 1 }}>
       <Bg modeToggle={modeToggle} /> *
        <Nav modeToggle={modeToggle} setModeToggle={setModeToggle} handleNavigation={handleNavigation} pColor={pColor}/>
+       <Routes>
+        <Route path="/" element= {<Landing modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}></Route>
+       </Routes>
       
    
 

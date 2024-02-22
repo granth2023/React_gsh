@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import noiseTexture from '../assests/noiseTexture.png'
+import purplecurtains from '../assests/purplecurtains.jpeg'
+import opencurtains from '../assests/opencurtains.jpeg'
+import redcurtains from '../assests/redcurtains.jpg'
+import bluecurtain from '../assests/bluecurtain.webp'
 //assest noise texture
 
 function Bg({ modeToggle }) {
@@ -14,7 +18,7 @@ function Bg({ modeToggle }) {
                 return prevHues.map((hue, index) => {
                     if(directions[index] && hue < 75) {
                         return hue + 1
-                    } else if (!direcitons[index] && hue > 0){
+                    } else if (!directions[index] && hue > 0){
                         return hue - 1
                     } else if (hue === 75){
                     setDirections((prev) => {
@@ -118,11 +122,11 @@ function Bg({ modeToggle }) {
               className="h-full w-full"
               style={{
                 position: 'fixed',
-                backgroundImage: `url(${noiseTexture})`,
+                backgroundImage: `url(${purplecurtains})`,
                 backgroundBlendMode: 'multiply',
                 opacity: '50%',
-                backgroundRepeat: 'reapeat',
-                backgroundSize: '40px 40px'
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover'
               }}
               />
         </div>
