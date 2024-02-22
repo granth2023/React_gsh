@@ -1,50 +1,104 @@
-import React. { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { ReactComponent as SideArrow } from '../assets/sitesidearrow.svg'
+import { ReactComponent as SideArrow2 } from '../assets/sitesidearrow2.svg'
+import MCCarousel from '../components/MCCarousel'
+import MCCouple from '../components/MCCouple'
+import { gsap } from 'gsap'
 
-import { gsap} from 'gsap';
+import shy1 from '../assets/metalcoat/shy1.jpg'
+import shy2 from '../assets/metalcoat/shy2.jpg'
+import cel1 from '../assets/metalcoat/cel1.jpg'
+import cel2 from '../assets/metalcoat/cel2.jpg'
+import mel1 from '../assets/metalcoat/mel1.jpg'
+import mel2 from '../assets/metalcoat/mel2.jpg'
+import op1 from '../assets/metalcoat/dev1.jpg'
+import op2 from '../assets/metalcoat/dev2.jpg'
 
-function Dreamerica ({ modeToggle, pColor, handleNavigation}) {
-    const navigate = useNavigate()
-    const childrenRef = useRef(null)
+function Dreamerica({ modeToggle, pColor, handleNavigation }) {
+  const navigate = useNavigate()
+  const childrenRef = useRef(null)
 
+  useEffect(() => {
+    const elements = childrenRef.current.children
+    gsap.set(elements, { y: 30, autoAlpha: 0 }) // set initial position
 
-    useEffect(() => {
-        const elements = childrenRef.current.children 
-        gsap.set(elements, { y:30, autoAlpha: 0 })
+    gsap.to(elements, {
+      y: 0,
+      autoAlpha: 1,
+      stagger: 0.4, // delay between each child animation
+      duration: 1, // animation duration
+      ease: 'easeInOut', // easing function
+      overwrite: 'auto'
+    })
+  }, [])
 
-        gsap.to(elements, {
-            y: 0,
-            autoAlpha: 1,
-            stagger: 0.4,
-            duration: 1,
-            ease: 'easeInOut',
-            overwrite: 'auto'
-        })
-}, [])
-
-return (
-
-    </h2>
-  <div className='flex flex-col font-higuen text-6xl mt-40 mb-40 justify center items-center leading-snug'>
-    <div onClick={() => handleNavigation('/')} className='flex cursor-pointer'>
-        {modeToggle ? (
-        <SideArrow2 className="h-10 mt-4 mr-2"/>
-    ) : (     
-        <SideArrow className='h-10 mt-4 mr-2'/>
-    )}
-        <h2>Home&emsp;</h2>
-    <div onClick={() => handleNavigation('/deerkillpark')} className='flex cursor-pointer'>
-        <h2>&emsp;Next</h2>
-        {modeToggle ? (
-            <SideArrow2 className="h-10 mt-4 ml-2 rotate-180"/>
-) : ( 
-            <SideArrow className="h-10 mt-4 ml-2 rotate-180"/>
-)}
-            </div>
+  return (
+    <div
+      ref={childrenRef}
+      style={{ color: pColor }}
+      className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80  "
+    >
+      <h2 className="text-5xl sm:text-8xl font-higuen">Metal Coat</h2>
+      <h3 className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
+        Movie <br/> 
+       Surreal, Psychological
+      </h3>
+      <p className="font-aktiv text-xs sm:text-sm lg:text-lg w-[80%] mt-6">
+        Story
+      </p>
+      <div className='flex justify-center'>
+      <MCCarousel pColor={pColor}></MCCarousel>
+      </div>
+      <p className="font-aktiv mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
+        story
+      </p>
+      <div className='sm:grid sm:grid-cols-2 gap-x-4 mt-20'>
+        <MCCouple className={'mt-12'} pColor={pColor} src1={cel1} src2={cel2} />
+        <MCCouple
+          className={'translate-x-10'}
+          pColor={pColor}
+          src1={mel1}
+          src2={mel2}
+        />
+        <MCCouple pColor={pColor} src1={op1} src2={op2} />
+        <MCCouple
+          className={'translate-x-10'}
+          pColor={pColor}
+          src1={shy1}
+          src2={shy2}
+        />
+      </div>
+      <div>
+        <h2
+          style={{
+            borderBottom: `1px solid ${pColor}`
+          }}
+          className="font-higuen text-3xl pb-2 mt-16 border-b-1 cursor-pointer "
+        >
+          {/* <a href="https://metalcoat.xyz/">Visit the site</a> */}
+        </h2>
+        <div className="flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug">
+          <div onClick={() => handleNavigation('/')} className="flex cursor-pointer">
+            {modeToggle ? (
+              <SideArrow2 className="h-10 mt-4 mr-2" />
+            ) : (
+              <SideArrow className="h-10 mt-4 mr-2" />
+            )}
+            <h2>Home&emsp;</h2>
+          </div>
+          <div onClick={() => handleNavigation('/deerkillpark')} className="flex cursor-pointer">
+            <h2>&emsp;Next</h2>
+            {modeToggle ? (
+              <SideArrow2 className="h-10 mt-4 ml-2 rotate-180" />
+            ) : (
+              <SideArrow className="h-10 mt-4 ml-2 rotate-180" />
+            )}
+          </div>
         </div>
+      </div>
     </div>
-</div>
-)
+  )
 }
 
-export default Dreamerica 
+export default Dreamerica
