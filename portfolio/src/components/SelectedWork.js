@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { gsap } from 'gsap'
 import userEvent from '@testing-library/user-event'
 
-function SelectedWork({ modeToggle, pColor, handleNavgiation}){
+function SelectedWork({ modeToggle, pColor, handleItemClick}){
         const workRef = useRef(null);
         const [isInView, setIsInView] = useState(false);
         const hasAnimated = useRef(false);
@@ -21,7 +21,7 @@ function SelectedWork({ modeToggle, pColor, handleNavgiation}){
                 }
                 );
 
-                if( workRef.current) {
+                if( workRef.current !== null) {
                     observer.observe(workRef.current);
                 }
 
