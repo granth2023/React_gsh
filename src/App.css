@@ -4,8 +4,8 @@
 @import 'tailwindcss/utilities';
 
 @font-face {
-  font-family: 'higuen';
-  src: url('./assets/Higuen\ Serif.otf') format('opentype');
+  font-family: 'HiguenSerif';
+  src: url('./assests//Higuen\ Serif.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }

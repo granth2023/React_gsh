@@ -3,19 +3,34 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "gsap": "^3.12.5",
+    "autoprefixer": "^10.4.15",
+    "gsap": "^3.12.2",
+    "locomotive-scroll": "^4.1.4",
+    "noisejs": "^2.1.0",
+    "normalize.css": "^8.0.1",
+    "pixi-filters": "^5.2.1",
+    "pixi.js": "^7.2.4",
+    "postcss": "^8.4.29",
+    "postcss-cli": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
+    "simplex-noise": "^4.0.1",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^3.3.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "tailwindcss build src/index.css -o src/output.css && react-scripts start",
+    "build": "tailwindcss build src/index.css -o src/output.css && react-scripts build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,10 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1"
   }
 }

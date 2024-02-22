@@ -2,13 +2,12 @@ import React, { useRef, useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom'
 
 import { gsap } from 'gsap'
-import userEvent from '@testing-library/user-event'
+
 
 function SelectedWork({ modeToggle, pColor, handleItemClick}){
         const workRef = useRef(null);
         const [isInView, setIsInView] = useState(false);
         const hasAnimated = useRef(false);
-        const navigate = useNavigate();
 
         useEffect(() => {
             const observer = new IntersectionObserver(([entry]) => {
@@ -21,7 +20,7 @@ function SelectedWork({ modeToggle, pColor, handleItemClick}){
                 }
                 );
 
-                if( workRef.current !== null) {
+                if( workRef.current) {
                     observer.observe(workRef.current);
                 }
 
@@ -50,9 +49,7 @@ function SelectedWork({ modeToggle, pColor, handleItemClick}){
                     }
                 }, [isInView]);
 
-                const handleItemClick = (path) => {
-                    navigate(path);
-                }
+        
 
                 return ( 
                     <div className="mt-40 lg:mt-64">
