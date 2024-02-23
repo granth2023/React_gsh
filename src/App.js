@@ -58,6 +58,8 @@ function App() {
        > </Route>
        <Route path="/deerkillpark" element = {<Deerkillpark modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
+        <Route path="/safecracker" element = {<Safecracker modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+       ></Route>
        </Routes>
       
    
