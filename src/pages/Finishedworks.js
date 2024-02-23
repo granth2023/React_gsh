@@ -34,6 +34,12 @@ function FinishedWorks( { modeToggle, pColor, handleNavigation}) {
       Driveway Radio 
       </h3>
       <div className="flex justify-center mt-12">
+
+
+
+        
+      </div>
+      <div className="flex justify-center mt-12">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
