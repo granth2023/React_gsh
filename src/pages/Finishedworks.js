@@ -34,10 +34,11 @@ function FinishedWorks( { modeToggle, pColor, handleNavigation}) {
       Driveway Radio 
       </h3>
       <div className="flex justify-center mt-12">
+          <video controls style={{}}
 
 
 
-        
+
       </div>
       <div className="flex justify-center mt-12">
         <img
