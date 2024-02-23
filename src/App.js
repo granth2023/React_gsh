@@ -6,7 +6,14 @@ import 'slick-carousel/slick/slick-theme.css';
 import Bg from './components/Bg'
 import Nav from './components/Nav'
 import Landing from './pages/Landing';
+import Dreamerica from './pages/Dreamerica';
+import Deerkillpark from './pages/DeerkillPark';
+import Safecracker from './pages/Safecracker';
+import Wando from './pages/Wando';
+import Sabrina from './pages/Sabrina';
+import FinishedWorks from './pages/Finishedworks';
 import { Route, Routes, useNavigate } from 'react-router-dom';
+
 import React, { useRef, useState, useEffect } from 'react'
 
 
@@ -45,7 +52,12 @@ function App() {
       <Bg modeToggle={modeToggle} /> *
        <Nav modeToggle={modeToggle} setModeToggle={setModeToggle} handleNavigation={handleNavigation} pColor={pColor}/>
        <Routes>
-        <Route path="/" element= {<Landing modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}></Route>
+        <Route path="/" element= {<Landing modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+        ></Route>
+        <Route path="/dreamerica" element = {<Dreamerica modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+       > </Route>
+       <Route path="/deerkillpark" element = {<Deerkillpark modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+       ></Route>
        </Routes>
       
    

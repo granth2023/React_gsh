@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { gsap } from 'gsap'
 
 
-function SelectedWork({ modeToggle, pColor, handleItemClick}){
+function SelectedWork({ modeToggle, pColor, handleNavigation}){
         const workRef = useRef(null);
         const [isInView, setIsInView] = useState(false);
         const hasAnimated = useRef(false);
@@ -59,17 +59,17 @@ function SelectedWork({ modeToggle, pColor, handleItemClick}){
                          </div>
                          <ul className='font-higuen text-3xl sm:text-5xl' ref={workRef}>
                             <li 
-                                onClick={() => handleItemClick('/Americamp')}
+                                onClick={() => handleNavigation('/dreamerica')}
                                 style={{
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
                                 }}
                                 className=" pb-2 mt-16 border-b-1 cursor pointer"
                             >
-                                Americamp (WIP)
+                                Dreamerica (WIP)
                             </li>
                             <li 
-                                onClick ={() => handleItemClick('/Deerkill Park')}
+                                onClick ={() => handleNavigation('/deerkillpark')}
                                 style={{
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
@@ -79,7 +79,7 @@ function SelectedWork({ modeToggle, pColor, handleItemClick}){
                                 Deerkill Park (WIP)
                             </li>
                             <li 
-                                onClick ={() => handleItemClick('/Safecracker')}
+                                onClick ={() => handleNavigation('/Safecracker')}
                                 style={{
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
@@ -89,7 +89,7 @@ function SelectedWork({ modeToggle, pColor, handleItemClick}){
                                 Safecracker (WIP)
                             </li>
                             <li 
-                                onClick ={() => handleItemClick('/WandoSlimLightWithin')}
+                                onClick ={() => handleNavigation('/WandoSlimLightWithin')}
                                 style={{
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 

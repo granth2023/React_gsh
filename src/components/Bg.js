@@ -122,7 +122,7 @@ function Bg({ modeToggle }) {
               className="h-full w-full"
               style={{
                 position: 'fixed',
-                backgroundImage: `url(${purplecurtains})`,
+                backgroundImage: modeToggle ? `url(${redcurtains})` : `url(${bluecurtain})`,
                 backgroundBlendMode: 'multiply',
                 opacity: '50%',
                 backgroundRepeat: 'no-repeat',

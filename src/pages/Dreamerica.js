@@ -1,19 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ReactComponent as SideArrow } from '../assets/sitesidearrow.svg'
-import { ReactComponent as SideArrow2 } from '../assets/sitesidearrow2.svg'
-import MCCarousel from '../components/MCCarousel'
-import MCCouple from '../components/MCCouple'
+import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
+import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
+
+// import MCCarousel from '../components/MCCarousel'
+// import MCCouple from '../components/MCCouple'
 import { gsap } from 'gsap'
 
-import shy1 from '../assets/metalcoat/shy1.jpg'
-import shy2 from '../assets/metalcoat/shy2.jpg'
-import cel1 from '../assets/metalcoat/cel1.jpg'
-import cel2 from '../assets/metalcoat/cel2.jpg'
-import mel1 from '../assets/metalcoat/mel1.jpg'
-import mel2 from '../assets/metalcoat/mel2.jpg'
-import op1 from '../assets/metalcoat/dev1.jpg'
-import op2 from '../assets/metalcoat/dev2.jpg'
 
 function Dreamerica({ modeToggle, pColor, handleNavigation }) {
   const navigate = useNavigate()
@@ -39,7 +32,7 @@ function Dreamerica({ modeToggle, pColor, handleNavigation }) {
       style={{ color: pColor }}
       className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80  "
     >
-      <h2 className="text-5xl sm:text-8xl font-higuen">Metal Coat</h2>
+      <h2 className="text-5xl sm:text-8xl font-higuen">Dreamerica</h2>
       <h3 className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
         Movie <br/> 
        Surreal, Psychological
@@ -48,26 +41,24 @@ function Dreamerica({ modeToggle, pColor, handleNavigation }) {
         Story
       </p>
       <div className='flex justify-center'>
-      <MCCarousel pColor={pColor}></MCCarousel>
+      {/* <MCCarousel pColor={pColor}></MCCarousel> */}
       </div>
       <p className="font-aktiv mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
         story
       </p>
       <div className='sm:grid sm:grid-cols-2 gap-x-4 mt-20'>
-        <MCCouple className={'mt-12'} pColor={pColor} src1={cel1} src2={cel2} />
+        {/* <MCCouple className={'mt-12'} pColor={pColor} />
         <MCCouple
           className={'translate-x-10'}
           pColor={pColor}
-          src1={mel1}
-          src2={mel2}
+      
         />
-        <MCCouple pColor={pColor} src1={op1} src2={op2} />
+        <MCCouple pColor={pColor}  />
         <MCCouple
           className={'translate-x-10'}
           pColor={pColor}
-          src1={shy1}
-          src2={shy2}
-        />
+      
+        /> */}
       </div>
       <div>
         <h2
@@ -81,9 +72,9 @@ function Dreamerica({ modeToggle, pColor, handleNavigation }) {
         <div className="flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug">
           <div onClick={() => handleNavigation('/')} className="flex cursor-pointer">
             {modeToggle ? (
-              <SideArrow2 className="h-10 mt-4 mr-2" />
-            ) : (
               <SideArrow className="h-10 mt-4 mr-2" />
+            ) : (
+              <SideArrow2 className="h-10 mt-4 mr-2" />
             )}
             <h2>Home&emsp;</h2>
           </div>

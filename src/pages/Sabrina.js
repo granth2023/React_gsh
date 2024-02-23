@@ -6,7 +6,7 @@ import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
 
 import { gsap } from 'gsap'
 
-function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
+function Sabrina( { modeToggle, pColor, handleNavigation}) {
     const navigate = useNavigate()
     const childrenRef = useRef(null)
 
@@ -29,9 +29,9 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         ref={childrenRef} 
         style={{ color: pColor }} 
         className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 ">
-      <h2 className="text-5xl sm:text-8xl font-higuen">Deerkill Park</h2>
+      <h2 className="text-5xl sm:text-8xl font-higuen">Sabrina</h2>
       <h3 className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
-        Television, surreal, drama 
+       Movie, Surreal Drama, adapted from B Beyond Words
       </h3>
       <div className="flex justify-center mt-12">
         <img
@@ -70,7 +70,7 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
           {modeToggle ? <SideArrow2 className='h-10 mt-4 mr-2'/> : <SideArrow className='h-10 mt-4 mr-2'/>}
           <h2>Home&emsp;</h2>
           </div>
-          <div onClick={() => handleNavigation('/safecracker')} className='flex cursor-pointer'>
+          <div onClick={() => handleNavigation('/finishedworks')} className='flex cursor-pointer'>
           <h2>&emsp;Next</h2>
           {modeToggle ? <SideArrow2 className='h-10 mt-4 ml-2 rotate-180'/> : <SideArrow className='h-10 mt-4 ml-2 rotate-180'/>}
           </div>
@@ -80,4 +80,4 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
   )
 }
 
-   export default Deerkillpark 
+   export default Sabrina 
