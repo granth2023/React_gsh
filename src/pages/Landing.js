@@ -95,17 +95,16 @@ return (
                     </div>
                     </div><div ref={landingRef}
                         style={{ opacity: 0 }}
-                        className="flex text-center justify-center font-roadway pt-8 lg:pt-4 z-4 text-lg sm:text-4xl"
+                        className="flex text-center justify-center font-roadway pt-8 lg:pt-4 z-4 text-lg sm:text-5xl"
                     >
                         <div className='w-full'>
                         <div className="flex justify-center">
                         <div className="flex flex-col">
                         <div className="flex flex-col font-bold">
-                        <h2>Filmmaker, Writer, Director & Editor</h2>
+                        <h2> Writer | Director | Editor</h2>
                 </div>
-                        <p className=" pt-8 text-xs sm:tex-sm text-left font-roadway w-40 sm:w-80">
-                            
-
+                        <p className=" pt-8 text-xs sm:text-4xl text-center justify-center font-roadway w-full mx-auto leading-loose">
+                            I'm a filmmaker creating original surrealist satirical thrillers. I've also adapted books into screenplays, rewritten exisiting drafts, and directed/edited projects for hire. I'm based in Brooklyn and was born and raised in north Jersey. 
                         </p>
             </div>
                     {/* <div>
