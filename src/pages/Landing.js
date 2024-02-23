@@ -79,7 +79,7 @@ return (
         <div> 
             <div 
                 ref={headerRef}
-                className="text-7xl sm:text-[10vh] lg:text-[17vh] text-center"
+                className="text-8xl sm:text-[10vh] lg:text-[17vh] text-center"
             >
                 <h1 style={{ opacity: 0}} className="font-gothic">
                     Grant Seth Harris
@@ -95,7 +95,7 @@ return (
                     </div>
                     </div><div ref={landingRef}
                         style={{ opacity: 0 }}
-                        className="flex text-center justify-center font-roadway pt-8 lg:pt-4 z-4 text-lg sm:text-5xl"
+                        className="flex text-center justify-center font-roadway pt-8 lg:pt-4 z-4 text-lg sm:text-6xl"
                     >
                         <div className='w-full'>
                         <div className="flex justify-center">
@@ -103,7 +103,7 @@ return (
                         <div className="flex flex-col font-bold">
                         <h2> Writer | Director | Editor</h2>
                 </div>
-                        <p className=" pt-8 text-xs sm:text-4xl text-center justify-center font-roadway w-full mx-auto leading-loose">
+                        <p className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
                             I'm a filmmaker creating original surrealist satirical thrillers. I've also adapted books into screenplays, rewritten exisiting drafts, and directed/edited projects for hire. I'm based in Brooklyn and was born and raised in north Jersey. 
                         </p>
             </div>
