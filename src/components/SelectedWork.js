@@ -98,6 +98,17 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                             >
                                 Wando, Slim, The Light Within (WIP)
                             </li>
+                            <li 
+                                onClick ={() => handleNavigation('/sabrina')}
+                                style={{
+                                    borderBottom: `1px solid ${pColor}`,
+                                    opacity: 0 
+                                }}
+                                className="pb-2 mt-16 border-b-1 cursor pointer"
+                            >
+                               Sabrina (WIP)
+                            </li>
+                            
                          </ul>
                     </div>
                 )
