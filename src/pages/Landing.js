@@ -95,27 +95,27 @@ return (
                     </div>
                     </div><div ref={landingRef}
                         style={{ opacity: 0 }}
-                        className="flex text-center justify-center font-roadway pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
+                        className="flex text-center justify-center font-roadway pt-8 lg:pt-4 z-4 text-lg sm:text-4xl"
                     >
                         <div className='w-full'>
                         <div className="flex justify-center">
                         <div className="flex flex-col">
                         <div className="flex flex-col font-bold">
-                        <h2>Filmmaker</h2>
+                        <h2>Filmmaker, Writer, Director & Editor</h2>
                 </div>
                         <p className=" pt-8 text-xs sm:tex-sm text-left font-roadway w-40 sm:w-80">
-                            answers
+                            
 
                         </p>
             </div>
-                    <div>
+                    {/* <div>
                         {modeToggle ?(
                             <img src={downarrowImage} className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4 rounded-full"/>
                         ) :(
                             <img src={downarrowImage} className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4 rounded-full"/>
                         )} 
                              
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
