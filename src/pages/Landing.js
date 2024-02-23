@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import SelectedWork from '../components/SelectedWork';
 import Contact from '../components/Contact';
+import downarrowImage from '../assests/downarrow.webp';
 
 import { gsap } from 'gsap';
 
@@ -107,20 +108,14 @@ return (
                             answers
 
                         </p>
-            {/* </div> */}
-            {/* <div className="flex felx-col mr-6 items-center justify-center">      */}
-                {/* {modeToggle ? (
-                    <SiteScroll2 className="w-24 2xl:w-28 animate-slowspin site-scroll"/>
-                ): (
-                    <SiteScroll className="w-24 2xl:w-28 animate-slowspin site-scroll"/>
-                    )}
+            </div>
                     <div>
                         {modeToggle ?(
-                            <SiteDownArrow2 className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4"/>
+                            <img src={downarrowImage} className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4 rounded-full"/>
                         ) :(
-                            <SiteDownArrow className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4"/>
-                        )} */}=
-                             {/* </div> */}
+                            <img src={downarrowImage} className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4 rounded-full"/>
+                        )} 
+                             
                         </div>
                     </div>
                 </div>

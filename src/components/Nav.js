@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import DarkSwitch from './DarkSwitch';
 import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
 import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
-
+import homeicon from '../assests/homeicon.webp'
 
 function Nav ({ 
     modeToggle, 
@@ -24,18 +24,18 @@ function Nav ({
             }}
           >
             {modeToggle ? (
-              <SideArrow 
+              <img src={homeicon} 
                 onClick={() => {
                   handleNavigation('/');
                 }}
-                className="site-logo h-4 cursor-pointer"
+                className="site-logo h-9 w-9 cursor-pointer rounded-full"
               />
             ) : (
-              <SideArrow
+              <img src={homeicon}
                 onClick={() => {
                   handleNavigation('/');
                 }}
-                className="site-logo h-4 cursor-pointer"
+                className="site-logo h-9 w-9 cursor-pointer rounded-full"
               />
             )}
             <DarkSwitch
