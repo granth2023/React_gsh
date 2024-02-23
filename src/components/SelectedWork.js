@@ -79,7 +79,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                                 Deerkill Park (WIP)
                             </li>
                             <li 
-                                onClick ={() => handleNavigation('/Safecracker')}
+                                onClick ={() => handleNavigation('/safecracker')}
                                 style={{
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
@@ -89,7 +89,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                                 Safecracker (WIP)
                             </li>
                             <li 
-                                onClick ={() => handleNavigation('/WandoSlimLightWithin')}
+                                onClick ={() => handleNavigation('/wando')}
                                 style={{
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
