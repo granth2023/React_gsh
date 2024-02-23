@@ -108,6 +108,16 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                             >
                                Sabrina (WIP)
                             </li>
+                            <li 
+                                onClick ={() => handleNavigation('/finishedworks')}
+                                style={{
+                                    borderBottom: `1px solid ${pColor}`,
+                                    opacity: 0 
+                                }}
+                                className="pb-2 mt-16 border-b-1 cursor pointer"
+                            >
+                                Finished Works ( 2 Items)
+                            </li>
                             
                          </ul>
                     </div>
