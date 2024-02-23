@@ -60,6 +60,8 @@ function App() {
        ></Route>
         <Route path="/safecracker" element = {<Safecracker modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
+        <Route path="/wando" element = {<Wando modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+       ></Route>
        </Routes>
       
    
