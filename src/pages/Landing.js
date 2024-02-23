@@ -79,7 +79,7 @@ return (
         <div> 
             <div 
                 ref={headerRef}
-                className="text-8xl sm:text-[10vh] lg:text-[17vh] text-center"
+                className="text-7xl sm:text-[10vh] lg:text-[17vh] text-center"
             >
                 <h1 style={{ opacity: 0}} className="font-gothic">
                     Grant Seth Harris
