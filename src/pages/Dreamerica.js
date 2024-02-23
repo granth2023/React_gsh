@@ -32,18 +32,18 @@ function Dreamerica({ modeToggle, pColor, handleNavigation }) {
       style={{ color: pColor }}
       className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80  "
     >
-      <h2 className="text-5xl sm:text-8xl font-higuen">Dreamerica</h2>
-      <h3 className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
+      <h2 className="text-5xl sm:text-8xl font-gothic">Dreamerica</h2>
+      <h3 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
         Movie <br/> 
        Surreal, Psychological
       </h3>
-      <p className="font-aktiv text-xs sm:text-sm lg:text-lg w-[80%] mt-6">
+      <p className="font-roadway text-xs sm:text-sm lg:text-lg w-[80%] mt-6">
         Story
       </p>
       <div className='flex justify-center'>
       {/* <MCCarousel pColor={pColor}></MCCarousel> */}
       </div>
-      <p className="font-aktiv mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
+      <p className="font-roadway mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
         story
       </p>
       <div className='sm:grid sm:grid-cols-2 gap-x-4 mt-20'>
@@ -65,11 +65,11 @@ function Dreamerica({ modeToggle, pColor, handleNavigation }) {
           style={{
             borderBottom: `1px solid ${pColor}`
           }}
-          className="font-higuen text-3xl pb-2 mt-16 border-b-1 cursor-pointer "
+          className="font-gothic text-3xl pb-2 mt-16 border-b-1 cursor-pointer "
         >
           {/* <a href="https://metalcoat.xyz/">Visit the site</a> */}
         </h2>
-        <div className="flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug">
+        <div className="flex flex-col font-gothic text-6xl mt-40 mb-40 justify-center items-center leading-snug">
           <div onClick={() => handleNavigation('/')} className="flex cursor-pointer">
             {modeToggle ? (
               <SideArrow className="h-10 mt-4 mr-2" />

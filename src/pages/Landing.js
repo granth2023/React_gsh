@@ -81,30 +81,29 @@ return (
                 ref={headerRef}
                 className="text-7xl sm:text-[10vh] lg:text-[17vh] text-center"
             >
-                <h1 style={{ opacity: 0}} className="font-higuen">
-                    Grant 
+                <h1 style={{ opacity: 0}} className="font-gothic">
+                    Grant Seth Harris
                 </h1>
-                <h1 style={{ opacity: 0}} className="font-higuen">
-                    Seth 
+                <h1 style={{ opacity: 0}} className="font-gothic">
+                     
                 </h1>
                
                 <div style ={{ opacity: 0 }} className="flex justify-center">
                    
                     <div>
-                        <h1 className="font-higuen"> Harris</h1>
+                        <h1 className="font-gothic"> </h1>
                     </div>
                     </div><div ref={landingRef}
                         style={{ opacity: 0 }}
-                        className="flex text-left justify-between font-aktiv pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
+                        className="flex text-center justify-center font-roadway pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
                     >
                         <div className='w-full'>
-                        <div className="flex justify-between md:justify-around">
+                        <div className="flex justify-center">
                         <div className="flex flex-col">
                         <div className="flex flex-col font-bold">
-                        <h2>Writer</h2>
-                        <h2>Director</h2>
+                        <h2>Filmmaker</h2>
                 </div>
-                        <p className=" pt-8 text-xs sm:tex-sm text-left font-aktiv w-40 sm:w-80">
+                        <p className=" pt-8 text-xs sm:tex-sm text-left font-roadway w-40 sm:w-80">
                             answers
 
                         </p>

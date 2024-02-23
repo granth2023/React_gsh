@@ -4,8 +4,15 @@
 @import 'tailwindcss/utilities';
 
 @font-face {
-  font-family: 'HiguenSerif';
-  src: url('./assests//Higuen\ Serif.otf') format('opentype');
+  font-family: 'gothic';
+  src: url('./assests/gothic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roadway';
+  src: url('./assests/roadway.otf') format ('opentype');
   font-weight: normal;
   font-style: normal;
 }

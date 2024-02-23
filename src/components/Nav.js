@@ -28,14 +28,14 @@ function Nav ({
                 onClick={() => {
                   handleNavigation('/');
                 }}
-                className="site-logo h-9 w-9 cursor-pointer rounded-full"
+                className="site-logo h-9 w-9 cursor-pointer rounded-full hover-grow"
               />
             ) : (
               <img src={homeicon}
                 onClick={() => {
                   handleNavigation('/');
                 }}
-                className="site-logo h-9 w-9 cursor-pointer rounded-full"
+                className="site-logo h-9 w-9 cursor-pointer rounded-full hover-grow"
               />
             )}
             <DarkSwitch

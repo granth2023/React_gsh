@@ -51,18 +51,18 @@ function Contact({ modetoggle, pColor }) {
         return ( 
             <div className='mt-40 sm:mt-60 mb-20 lg:mb-40'>
                 <div className="flex justify-between">
-                    <h2 className="font-aktiv font-bold text-lg sm:text-2xl">Contact Information</h2>
+                    <h2 className="font-roadway font-bold text-lg sm:text-4xl"> </h2>
                     
                 </div>
                 <div
                     ref={contactRef}
-                    className="flex flex-col mt-16 sm:mt-24 items-center font-higuen text-3xl sm:text-5xl"
+                    className="flex flex-col mt-16 sm:mt-24 items-center font-gothic text-3xl sm:text-5xl"
                 >
                     <div style={{opacity: 0}} className="flex">
                         
                 
                     <a href="mailto:turkeyroll.grant@gmail.com">
-                        <h2 className="pb-2 cursor-pointer">Email</h2>
+                        <h2 className="pb-2 cursor-pointer">email me here</h2>
                     </a>
                     
        

@@ -29,8 +29,8 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
         ref={childrenRef} 
         style={{ color: pColor }} 
         className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 ">
-      <h2 className="text-5xl sm:text-8xl font-higuen">Safecracker</h2>
-      <h3 className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
+      <h2 className="text-5xl sm:text-8xl font-gothic">Safecracker</h2>
+      <h3 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
         Movie, Zany Heist
       </h3>
       <div className="flex justify-center mt-12">
@@ -40,7 +40,7 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
         //   src={crisol1}
         />
       </div>
-      <p className="font-aktiv mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
+      <p className="font-roadway mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
    story
       </p>
       <div className="flex justify-center mt-20">
@@ -65,7 +65,7 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
         />
       </div>
       <div>
-        <div className='flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug'>
+        <div className='flex flex-col font-gothic text-6xl mt-40 mb-40 justify-center items-center leading-snug'>
           <div onClick={() => handleNavigation('/')} className='flex cursor-pointer'>
           {modeToggle ? <SideArrow2 className='h-10 mt-4 mr-2'/> : <SideArrow className='h-10 mt-4 mr-2'/>}
           <h2>Home&emsp;</h2>

@@ -19,8 +19,8 @@ module.exports = {
           updown: 'updown 2s ease-in-out infinite alternate'
         },
         fontFamily: {
-          'aktiv': ['aktiv-grotesk-extended', 'sans-serif'],
-          'higuen': ['higuen', 'serif']
+          'roadway': ['roadway', 'sans-serif'],
+          'gothic': ['gothic', 'serif']
         },
         fontWeight: {
           'regular': 400,

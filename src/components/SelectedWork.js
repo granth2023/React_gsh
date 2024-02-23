@@ -54,17 +54,17 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                 return ( 
                     <div className="mt-40 lg:mt-64">
                         <div className="flex justify-between"> 
-                            <h2 className="font-aktiv font-bold text-lg sm:text-2xl">Selected Work</h2>
+                            <h2 className="font-roadway font-bold text-lg sm:text-3xl">Featured Projects</h2>
                            
                          </div>
-                         <ul className='font-higuen text-3xl sm:text-5xl' ref={workRef}>
+                         <ul className='font-gothic text-3xl sm:text-5xl' ref={workRef}>
                             <li 
                                 onClick={() => handleNavigation('/dreamerica')}
                                 style={{
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
                                 }}
-                                className=" pb-2 mt-16 border-b-1 cursor pointer"
+                                className=" pb-2 mt-16 border-b-1  cursor-pointer "
                             >
                                 Dreamerica (WIP)
                             </li>
@@ -74,7 +74,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
                                 }}
-                                className="pb-2 mt-16 border-b-1 cursor pointer"
+                                className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
                                 Deerkill Park (WIP)
                             </li>
@@ -84,7 +84,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
                                 }}
-                                className="pb-2 mt-16 border-b-1 cursor pointer"
+                                className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
                                 Safecracker (WIP)
                             </li>
@@ -94,7 +94,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
                                 }}
-                                className="pb-2 mt-16 border-b-1 cursor pointer"
+                                className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
                                 Wando, Slim, The Light Within (WIP)
                             </li>
@@ -104,7 +104,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
                                 }}
-                                className="pb-2 mt-16 border-b-1 cursor pointer"
+                                className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
                                Sabrina (WIP)
                             </li>
@@ -114,7 +114,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                                     borderBottom: `1px solid ${pColor}`,
                                     opacity: 0 
                                 }}
-                                className="pb-2 mt-16 border-b-1 cursor pointer"
+                                className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
                                 Finished Works ( 2 Items)
                             </li>
