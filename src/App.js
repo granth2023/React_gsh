@@ -62,6 +62,8 @@ function App() {
        ></Route>
         <Route path="/wando" element = {<Wando modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
+        <Route path="/sabrina" element = {<Sabrina modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+       ></Route>
        </Routes>
       
    
