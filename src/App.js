@@ -64,6 +64,8 @@ function App() {
        ></Route>
         <Route path="/sabrina" element = {<Sabrina modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
+        <Route path="/finishedworks" element = {<FinishedWorks modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+       ></Route>
        </Routes>
       
    
