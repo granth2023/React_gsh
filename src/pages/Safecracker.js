@@ -41,7 +41,7 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
         />
       </div>
       <p className="font-roadway mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
-   story
+   There's money IN these hills! 
       </p>
       <div className="flex justify-center mt-20">
         <img
