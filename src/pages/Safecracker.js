@@ -37,7 +37,7 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
       Believed to only be an old Hollywood fairytale, the bank vault underneath the Hollywood sign becomes the location for the worlds greatest safecracker CHARACTERs and his crew's biggest and final score. Is the vault even real? How will they get in? Who owns it? And will they make it out alive? 
       </h3>
       <h3 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
-      Believed to only be an old Hollywood fairytale, the bank vault underneath the Hollywood sign becomes the location for the worlds greatest safecracker CHARACTERs and his crew's biggest and final score. Is the vault even real? How will they get in? Who owns it? And will they make it out alive? 
+      In March of 2023 I heard an episode of the Bill Simmons podcast where him and Sean Fennessey did a bit coming up with a heist movie they would love to see John Bernthal star in. Without their knowledge, I decided to 
       </h3>
 
       <div className="flex justify-center mt-12">
