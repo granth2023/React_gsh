@@ -54,7 +54,7 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
         Logline
         </h3>
       <h4 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
-      Believed to only be an old Hollywood fairytale, the bank vault underneath the Hollywood sign becomes the location for the worlds greatest safecracker CHARACTERs and his crew's biggest and final score. Is the vault even real? How will they get in? Who owns it? And will they make it out alive? 
+      Believed only as an old Hollywood tale, the bank vault underneath the Hollywood sign becomes the location for the worlds greatest safecracker CHARACTERs and his crew's biggest and final score. Is the vault even real? How will they get in? Who owns it? And will they make it out alive? 
       </h4>
       <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
        Synopsis
