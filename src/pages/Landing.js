@@ -101,7 +101,7 @@ return (
                         <div className="flex justify-center">
                         <div className="flex flex-col">
                         <div className="flex flex-col font-bold">
-                        <h2> Writer | Director</h2>
+                        <h2> Writer | Director | Editor</h2>
                 </div>
                         <p className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
                             I'm a filmmaker creating original surrealist satirical thrillers. I've also adapted books into screenplays, rewritten exisiting drafts, and directed/edited projects for hire. I'm based in Brooklyn and was born and raised in north Jersey. 

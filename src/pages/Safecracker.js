@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
 import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
+import safecracker from '../assests/safecrackerposterAI.png'
 //side arrow 
 
 import { gsap } from 'gsap'
@@ -25,6 +26,14 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
     }, [])
 
     return (
+    //   <div 
+    //   style={{ 
+    //     backgroundImage: `url(${backgroundImage})`,
+    //     backgroundSize: 'cover', 
+    //     backgroundPosition: 'center center', 
+    //     minHeight: '100vh',
+    //   }}
+    // > 
         <div 
         ref={childrenRef} 
         style={{ color: pColor }} 
@@ -33,6 +42,14 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
       <h4 className="text-lg text-center sm:text-5xl font-gothic font-bold mt-12">
       There's money IN these (Hollywood) hills! 
       </h4>
+      <div className="flex justify-center mt-12">
+        <img
+          style={{ borderColor: pColor }}
+          className="border-[1px] w-fit h-auto"
+          src={safecracker}
+        />
+      </div> 
+      
       <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
         Logline
         </h3>
@@ -64,13 +81,13 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
       I probably would have never thought of it without their idea and heist movies are always an easy watch for me so it was nothing but a pleasure to write it. I loved stepping outside some of my normal genre conventions and write in a genre that I've long admired. 
       </h4>
 
-      <div className="flex justify-center mt-12">
+      {/* <div className="flex justify-center mt-12">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
         //   src={crisol1}
         />
-      </div>
+      </div> */}
       <p className="font-roadway mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
  
       </p>
@@ -108,6 +125,7 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
         </div>
       </div>
     </div>
+    // </div>
   )
 }
 

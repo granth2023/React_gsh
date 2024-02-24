@@ -6,7 +6,7 @@ import redcurtains from '../assests/redcurtains.jpg'
 import bluecurtain from '../assests/bluecurtain.webp'
 //assest noise texture
 
-function Bg({ modeToggle }) {
+function Bg({ modeToggle, backgroundImage  }) {
     const [hues, setHues] = useState([
         10, 28, 50, 75, 42, 30, 10, 18, 35, 55, 63, 70
     ])
@@ -122,6 +122,7 @@ function Bg({ modeToggle }) {
               className="h-full w-full"
               style={{
                 position: 'fixed',
+                // backgroundImage: `url(${backgroundImage})`,
                 backgroundImage: modeToggle ? `url(${redcurtains})` : `url(${bluecurtain})`,
                 backgroundBlendMode: 'multiply',
                 opacity: '50%',
