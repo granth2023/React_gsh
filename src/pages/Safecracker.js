@@ -29,10 +29,17 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
         ref={childrenRef} 
         style={{ color: pColor }} 
         className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 ">
-      <h2 className="text-5xl sm:text-8xl font-gothic">Safecracker</h2>
+      <h2 className="text-5xl sm:text-8xl font-gothic">Safecracker </h2>
       <h3 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
-        Movie, Zany Heist
+      There's money IN these hills! 
       </h3>
+      <h3 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
+      Believed to only be an old Hollywood fairytale, the bank vault underneath the Hollywood sign becomes the location for the worlds greatest safecracker CHARACTERs and his crew's biggest and final score. Is the vault even real? How will they get in? Who owns it? And will they make it out alive? 
+      </h3>
+      <h3 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
+      Believed to only be an old Hollywood fairytale, the bank vault underneath the Hollywood sign becomes the location for the worlds greatest safecracker CHARACTERs and his crew's biggest and final score. Is the vault even real? How will they get in? Who owns it? And will they make it out alive? 
+      </h3>
+
       <div className="flex justify-center mt-12">
         <img
           style={{ borderColor: pColor }}
@@ -41,7 +48,7 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
         />
       </div>
       <p className="font-roadway mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
-   There's money IN these hills! 
+ 
       </p>
       <div className="flex justify-center mt-20">
         <img
