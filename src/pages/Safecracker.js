@@ -39,7 +39,7 @@ function Safecracker( { modeToggle, pColor, handleNavigation}) {
         style={{ color: pColor }} 
         className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 ">
       <h2 className="text-23xl text-center sm:text-8xl font-gothic">Safecracker </h2>
-      <h4 className="text-lg text-center sm:text-5xl font-gothic font-bold mt-12">
+      <h4 className="text-lg text-center sm:text-5xl font-gothic italic font-bold mt-12">
       There's money IN these (Hollywood) hills! 
       </h4>
       <div className="flex justify-center mt-12">
