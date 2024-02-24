@@ -66,7 +66,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                                 }}
                                 className=" pb-2 mt-16 border-b-1  cursor-pointer "
                             >
-                                Dreamerica (WIP)
+                                Dreamerica (Movie)
                             </li>
                             <li 
                                 onClick ={() => handleNavigation('/deerkillpark')}
@@ -76,7 +76,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                                 }}
                                 className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
-                                Deerkill Park (WIP)
+                                Deerkill Park (Television)
                             </li>
                             <li 
                                 onClick ={() => handleNavigation('/safecracker')}
