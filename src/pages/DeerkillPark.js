@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
 import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
-import dkp from '../assests/dkp.webp'
+import dkp2 from '../assests/dkp2.webp'
 //side arrow 
 
 import { gsap } from 'gsap'
@@ -38,7 +38,7 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
-          src={dkp}
+          src={dkp2}
         />
       </div>
       <p className="font-roadway mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
