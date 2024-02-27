@@ -7,7 +7,17 @@ const upload = multer({ dest: 'uploads/'});
 
 app.post('/projects/:projectId/files', upload.single('file', async (req, res) => {
     try{
-        const 
+        const { projectId } req.params;
+        const { file } = req; 
+        const { project } = await Project.findbyId(projectId);
+        
+        project.files.push({
+            filename: file.originalname,
+            filepath: file.filepath  
+            filetype: file.mimetype, 
+        });
+
+        
     }))
 
 
