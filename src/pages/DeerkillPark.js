@@ -42,7 +42,7 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         />
       </div>
       <p className="font-roadway mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
-   story
+   The future of a northeastern suburban town is upended when one of its' local citizens is directed by his clairvoyant doppelganger to seize power. 
       </p>
       <div className="flex justify-center mt-20">
         <img
