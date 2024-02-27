@@ -47,6 +47,15 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         <h4 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
    The future of a northeastern suburban town is upended when one of its' local citizens is directed by his clairvoyant doppelganger to seize power. 
       </h4>
+      <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
+        Logline
+        </h3>
+        <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
+        Logline
+        </h3>
+        <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
+        Logline
+        </h3>
       <div className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
