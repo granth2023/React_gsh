@@ -56,6 +56,9 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
         Creator's Note
         </h3>
+        <h4 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
+   Deerkill Park started as a play based on some experiences and feelings from the town I grew up in. It wasn't until the end of the draft that I discovered the idea of main character getting instructions from another version of himself and this was the basis for the pilot script. I love stories that to the audience seem like relatively small stakes, in this case a local town govnerment, but to the character are everything. On its own I think this is a strong basis for comedy and when you combine it with the  interiority of someones mind and the forces that can only be seen in subconscious realms, you get a unique blend of the surreal mixed with satire. Suddenly, the small stakes the characters are playing out in, have an underbelly groudned in a deep darkness bigger than anything from our material world. The satirical is no longer funny because the characters care very much about stuff that isn't a huge deal but become frightening because of the forces behind their actions. What else are they capabale of? What else do they want? Where is it all going? 
+      </h4>
       <div className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
