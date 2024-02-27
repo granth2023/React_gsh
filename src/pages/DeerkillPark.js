@@ -97,3 +97,10 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
 }
 
    export default Deerkillpark 
+
+   //TO DO:
+   // update creator's note
+   // add script
+   //add synopsis
+   //add dream casting
+   
