@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import multer from 'multer';
 import { GridFsStorage } from 'multer-gridfs-storage';
-import routes from './routes/routes.js'; // Adjust the path based on your structure
+import routes from './routes.js'; // Adjust the path based on your structure
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -26,7 +26,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
 });
 
 // Use the routes
-app.use(routes);
+app.use('/api', routes);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

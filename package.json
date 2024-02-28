@@ -36,7 +36,8 @@
     "start": "tailwindcss build src/index.css -o src/output.css && react-scripts start",
     "build": "tailwindcss build src/index.css -o src/output.css && react-scripts build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject", 
+    "start-server": "node backend/server.js"
   },
   "eslintConfig": {
     "extends": [
