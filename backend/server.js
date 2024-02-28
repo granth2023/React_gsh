@@ -1,52 +1,80 @@
+import express from 'express';
 import dotenv from 'dotenv';
+import mongoose from 'mongoose';
+import morgan from 'morgan';
+import multer from 'multer';
+import fs from 'fs';
+import AWS from 'aws-sdk';
+import routes from './routes.js'; // Adjust the path to match your file structure
 
+// Initialize dotenv to use environment variables
 dotenv.config();
 
-import express from 'express';
-import mongoose from 'mongoose';
-
-import multer from 'multer';
-import { GridFsStorage } from 'multer-gridfs-storage';
-import routes from './routes.js'; // Adjust the path based on your structure
-
-
+// Initialize Express
 const app = express();
+
+// Morgan middleware for logging HTTP requests
+app.use(morgan('dev'));
+
+// MongoDB connection (if you're still using MongoDB for other parts of your app)
 const conn = mongoose.createConnection(process.env.MONGODB_URI);
+conn.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-let gfs;
-conn.once('open', () => {
-    gfs = new mongoose.mongo.GridFSBucket(conn.db, {
-        bucketName: 'uploads',
-    });
+// AWS S3 configuration
+AWS.config.update({
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: process.env.AWS_REGION
 });
+const s3 = new AWS.S3();
 
-const storage = new GridFsStorage({
-    url: process.env.MONGODB_URI,
-    file: (req, file) => {
-      return new Promise((resolve, reject) => {
-        const fileInfo = {
-          filename: file.originalname,
-          bucketName: 'uploads' // Use your desired bucket name here
-        };
-        resolve(fileInfo);
-      });
-    }
-  });
+// Multer configuration for file uploads
+const upload = multer({ dest: 'uploads/' }); // Temporarily store files locally
 
-  const upload = multer({ storage });
-
-// Storage setup remains the same
-// const storage = new GridFsStorage({ /* configuration */ });
-// const upload = multer({ storage });
-
+// Upload endpoint
 app.post('/upload', upload.single('file'), (req, res) => {
-    res.json({ file: req.file });
+  if (!req.file) {
+    return res.status(400).send('No file uploaded.');
+  }
+
+  const file = req.file;
+  const uploadParams = {
+    Bucket: process.env.AWS_S3_BUCKET_NAME, // Your bucket name
+    Key: file.originalname, // File name you want to save as in S3
+    Body: fs.createReadStream(file.path)
+  };
+
+  s3.upload(uploadParams, (err, data) => {
+    // Delete the file from local storage whether or not the upload was successful
+    fs.unlink(file.path, err => {
+      if (err) console.error("Error deleting file:", err);
+    });
+
+    if (err) {
+      return res.status(500).send("Error uploading file.");
+    }
+    res.send({ message: "File uploaded successfully.", data });
+  });
 });
 
 // Use the routes
 app.use('/api', routes);
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-    console.log('Listening on port', PORT);
+// Catch 404 and forward to error handler
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
+
+// General error handler
+app.use((err, req, res, next) => {
+  console.error(err.stack); // Log the error to the server console
+  res.status(err.status || 500).json({
+    message: err.message,
+    error: req.app.get('env') === 'development' ? err : {}
+  });
+});
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

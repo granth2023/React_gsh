@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import DarkSwitch from './DarkSwitch';
+import DarkSwitch from './DarkSwitch.js';
 import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
 import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
 import homeicon from '../assests/homeicon.webp'

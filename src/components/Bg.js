@@ -123,7 +123,7 @@ function Bg({ modeToggle, backgroundImage  }) {
               style={{
                 position: 'fixed',
                 // backgroundImage: `url(${backgroundImage})`,
-                backgroundImage: modeToggle ? `url(${redcurtains})` : `url(${bluecurtain})`,
+                backgroundImage: modeToggle ? `url(${bluecurtain})` : `url(${redcurtains})`,
                 backgroundBlendMode: 'multiply',
                 opacity: '50%',
                 backgroundRepeat: 'no-repeat',

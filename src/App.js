@@ -3,15 +3,15 @@ import './App.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import Bg from './components/Bg'
-import Nav from './components/Nav'
-import Landing from './pages/Landing';
-import Dreamerica from './pages/Dreamerica';
-import Deerkillpark from './pages/DeerkillPark';
-import Safecracker from './pages/Safecracker';
-import Wando from './pages/Wando';
-import Sabrina from './pages/Sabrina';
-import FinishedWorks from './pages/Finishedworks';
+import Bg from './components/Bg.js'
+import Nav from './components/Nav.js'
+import Landing from './pages/Landing.js';
+import Dreamerica from './pages/Dreamerica.js';
+import Deerkillpark from './pages/DeerkillPark.js';
+import Safecracker from './pages/Safecracker.js';
+import Wando from './pages/Wando.js';
+import Sabrina from './pages/Sabrina.js';
+import FinishedWorks from './pages/Finishedworks.js';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import React, { useRef, useState, useEffect } from 'react'

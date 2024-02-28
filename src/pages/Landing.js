@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import SelectedWork from '../components/SelectedWork';
-import Contact from '../components/Contact';
+import SelectedWork from '../components/SelectedWork.js';
+import Contact from '../components/Contact.js';
 import downarrowImage from '../assests/downarrow.webp';
 
 import { gsap } from 'gsap';
