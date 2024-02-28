@@ -1,11 +1,14 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import multer from 'multer';
-import { GridFsStorage } from 'multer-gridfs-storage';
-import routes from './routes.js'; // Adjust the path based on your structure
 import dotenv from 'dotenv';
 
 dotenv.config();
+
+import express from 'express';
+import mongoose from 'mongoose';
+
+import multer from 'multer';
+import { GridFsStorage } from 'multer-gridfs-storage';
+import routes from './routes.js'; // Adjust the path based on your structure
+
 
 const app = express();
 const conn = mongoose.createConnection(process.env.MONGODB_URI);
@@ -17,9 +20,24 @@ conn.once('open', () => {
     });
 });
 
+const storage = new GridFsStorage({
+    url: process.env.MONGODB_URI,
+    file: (req, file) => {
+      return new Promise((resolve, reject) => {
+        const fileInfo = {
+          filename: file.originalname,
+          bucketName: 'uploads' // Use your desired bucket name here
+        };
+        resolve(fileInfo);
+      });
+    }
+  });
+
+  const upload = multer({ storage });
+
 // Storage setup remains the same
-const storage = new GridFsStorage({ /* configuration */ });
-const upload = multer({ storage });
+// const storage = new GridFsStorage({ /* configuration */ });
+// const upload = multer({ storage });
 
 app.post('/upload', upload.single('file'), (req, res) => {
     res.json({ file: req.file });
