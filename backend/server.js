@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { response } from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
@@ -6,6 +6,7 @@ import multer from 'multer';
 import fs from 'fs';
 import AWS from 'aws-sdk';
 import routes from './routes.js'; // Adjust the path to match your file structure
+import Project from './models.js';
 
 // Initialize dotenv to use environment variables
 dotenv.config();
@@ -45,7 +46,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
     Body: fs.createReadStream(file.path)
   };
 
-  s3.upload(uploadParams, (err, data) => {
+  s3.upload(uploadParams, async (err, data) => {
     // Delete the file from local storage whether or not the upload was successful
     fs.unlink(file.path, unlinkErr => {
       if (unlinkErr) console.error("Error deleting file:", unlinkErr);
@@ -55,10 +56,35 @@ app.post('/upload', upload.single('file'), (req, res) => {
         console.error("aws s3 upload failed:", err);
       return res.status(500).send("Error uploading file.");
     }
-    console.log(data);
-    res.send({ message: "File uploaded successfully.", data });
-  });
+    const projectId = req.body.projectId;
+
+    try { 
+        const project = await Project.findById(projectId);
+        if (!project){
+            return res.status(404).send("Project no found")
+        }
+
+        const newFile = {
+            filename: file.originalname, //
+            filepath: uploadParams.Key,
+            filetype: file.mimetype,
+            url: data.Location
+        }
+        project.files.push(newFile);
+        await project.save();
+
+        res.send({ message: "Uploaded file successfully", data: newFile })
+        } catch (dbError) {
+            console.error(dbError);
+            res.status(500).send("error updating project")
+    }
 });
+});
+
+//     console.log(data);
+//     res.send({ message: "File uploaded successfully.", data });
+//   });
+// });
 
 // Use the routes
 app.use('/api', routes);

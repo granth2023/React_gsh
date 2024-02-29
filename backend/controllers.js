@@ -3,7 +3,7 @@ import Project from './models.js';
 export const getProject = async (req, res) => {
     try {
         const { projectId } = req.params;
-        const project = await getProject.findById(projectId).exec();
+        const project = await Project.findById(projectId).exec();
         if(project) {
             res.json(project);
         } else {
