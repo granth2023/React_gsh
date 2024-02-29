@@ -9,7 +9,7 @@ import routes from './routes.js'; // Adjust the path to match your file structur
 
 // Initialize dotenv to use environment variables
 dotenv.config();
-
+console.log(process.env.AWS_S3_BUCKET_NAME)
 // Initialize Express
 const app = express();
 
@@ -34,6 +34,7 @@ const upload = multer({ dest: 'uploads/' }); // Temporarily store files locally
 // Upload endpoint
 app.post('/upload', upload.single('file'), (req, res) => {
   if (!req.file) {
+    console.error('no file uplaoded');
     return res.status(400).send('No file uploaded.');
   }
 
@@ -46,13 +47,15 @@ app.post('/upload', upload.single('file'), (req, res) => {
 
   s3.upload(uploadParams, (err, data) => {
     // Delete the file from local storage whether or not the upload was successful
-    fs.unlink(file.path, err => {
-      if (err) console.error("Error deleting file:", err);
+    fs.unlink(file.path, unlinkErr => {
+      if (unlinkErr) console.error("Error deleting file:", unlinkErr);
     });
 
     if (err) {
+        console.error("aws s3 upload failed:", err);
       return res.status(500).send("Error uploading file.");
     }
+    console.log(data);
     res.send({ message: "File uploaded successfully.", data });
   });
 });
