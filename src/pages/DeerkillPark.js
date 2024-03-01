@@ -19,6 +19,14 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
     const [password, setPassword] = useState('');
     const [documentUrl, setDocumentUrl] = useState('https://gshportfolio.s3.us-east-2.amazonaws.com/Deerkill+Park.pdf')
 
+    const openModal = () => {
+      setModalIsOpen(true);
+    };
+
+    const closeModal = () => {
+      setModalIsOpen(false);
+      setPassword('dkp');
+
     useEffect(() => {
         const elements = childrenRef.current.children 
         gsap.set(elements, { y:30, autoAlpha: 0})
