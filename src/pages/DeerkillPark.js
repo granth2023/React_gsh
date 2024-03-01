@@ -92,7 +92,8 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
           className="Modal"
           overlayClassName="Overlay"
           >
-            
+            <h2>Enter Password</h2>
+
 
           </ReactModal>
    {/* <div className="mt-12 text-center">
