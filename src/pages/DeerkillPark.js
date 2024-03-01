@@ -86,7 +86,15 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         <button onClick ={openModal}>SCRIPT </button>
 
         <ReactModal 
-          is
+          isOpen={modalIsOpen}
+          onRequestClsoe={closeModal}
+          contentLabel='Enter password'
+          className="Modal"
+          overlayClassName="Overlay"
+          >
+            
+
+          </ReactModal>
    {/* <div className="mt-12 text-center">
       
         <a href={s3FileUrl} target="_blank" rel="noopener noreferrer" className="text-lg sm:text-2xl font-roadway font-bold">
