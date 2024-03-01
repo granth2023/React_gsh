@@ -1,10 +1,5 @@
-import AWS from 'aws-sdk'
-import dotenv from 'dotenv '
+import multer from 'multer';
 
-dotenv.config();
+const upload = multer ({ dest: 'uploads/' })
 
-AWS.config.update({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    region: process.env.AWS_REGION
-})
+export default upload;
