@@ -80,12 +80,19 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
         Dream Casting
         </h3>
+        <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
+        Read the script!
+        </h3>
+        <button onClick ={openModal}>SCRIPT </button>
 
-        <div className="mt-12 text-center">
+        <ReactModal 
+          is
+   {/* <div className="mt-12 text-center">
+      
         <a href={s3FileUrl} target="_blank" rel="noopener noreferrer" className="text-lg sm:text-2xl font-roadway font-bold">
           View Document
         </a>
-      </div>
+      </div> */}
         <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
         Creator's Note
         </h3>
