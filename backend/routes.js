@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 router.get('/projects/:projectId', getProject);
-router.post('/api/protected-files', accessProtectedFile);
+router.post('/protected-files', accessProtectedFile);
 // router.get('/file/:filename');
 
 export default router; 

@@ -10,7 +10,7 @@ const fileSchema = new mongoose.Schema({
 const projectSchema = new mongoose.Schema({
     name: {type: String, required: true},
     files: [fileSchema],
-    accessPassword: {type: String, required: true}
+    accessPassword: {type: String}
 });
 
 const Project = mongoose.model('Project', projectSchema)
