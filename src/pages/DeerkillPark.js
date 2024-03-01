@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef , useState } from 'react'
+import ReactModal from 'react-modal'
 import { useNavigate } from 'react-router-dom'
 import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
 import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
@@ -7,10 +8,16 @@ import dkp2 from '../assests/dkp2.webp'
 
 import { gsap } from 'gsap'
 
+ReactModal.setAppElement('#root')
+
 function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
     const navigate = useNavigate()
     const childrenRef = useRef(null)
-    const s3FileUrl = 'https://gshportfolio.s3.us-east-2.amazonaws.com/Deerkill+Park.pdf'
+    // const s3FileUrl = 'https://gshportfolio.s3.us-east-2.amazonaws.com/Deerkill+Park.pdf'
+
+    const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [password, setPassword] = useState('');
+    const [documentUrl, setDocumentUrl] = useState('https://gshportfolio.s3.us-east-2.amazonaws.com/Deerkill+Park.pdf')
 
     useEffect(() => {
         const elements = childrenRef.current.children 
