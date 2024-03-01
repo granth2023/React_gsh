@@ -10,6 +10,7 @@ import { gsap } from 'gsap'
 function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
     const navigate = useNavigate()
     const childrenRef = useRef(null)
+    const s3FileUrl = 'https://gshportfolio.s3.us-east-2.amazonaws.com/Deerkill+Park.pdf'
 
     useEffect(() => {
         const elements = childrenRef.current.children 
@@ -53,6 +54,12 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
         Dream Casting
         </h3>
+
+        <div className="mt-12 text-center">
+        <a href={s3FileUrl} target="_blank" rel="noopener noreferrer" className="text-lg sm:text-2xl font-roadway font-bold">
+          View Document
+        </a>
+      </div>
         <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
         Creator's Note
         </h3>
