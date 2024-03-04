@@ -82,7 +82,7 @@ return (
                 className="text-7xl sm:text-[10vh] lg:text-[17vh] text-center"
             >
                 <h1 style={{ opacity: 0}} className="font-gothic">
-                    g.s.h. <br>Grant Seth Harris</br>
+                    g.s.h. Grant Seth Harris
                 </h1>
                 <h1 style={{ opacity: 0}} className="font-gothic">
                      
