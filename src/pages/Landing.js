@@ -82,7 +82,7 @@ return (
                 className="text-7xl sm:text-[10vh] lg:text-[17vh] text-center"
             >
                 <h1 style={{ opacity: 0}} className="font-gothic">
-                    Welcome to Grant's 
+                    Oh! Hello! I totally wasn't expecting you on my custom made portfolio website. Let's see what I can pull together in an instant...
                 </h1>
                 <h1 style={{ opacity: 0}} className="font-gothic">
                      
@@ -104,7 +104,7 @@ return (
                     
                 </div>
                         <p className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
-                            I totally wasn't expecting you, come on in. Have a seat, can I get you a script? 
+                            One moment, just getting together a quick little colleciton of spec scripts, adaptations, and original psychological satirical dramas...
                         </p>
             </div>
                     {/* <div>
