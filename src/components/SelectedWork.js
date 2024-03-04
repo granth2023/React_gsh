@@ -4,33 +4,39 @@ import React, { useRef, useEffect, useState} from 'react';
 import { gsap } from 'gsap'
 
 
-function SelectedWork({ modeToggle, pColor, handleNavigation}){
+function SelectedWork({  pColor, handleNavigation}){
         const workRef = useRef(null);
         const [isInView, setIsInView] = useState(false);
         const hasAnimated = useRef(false);
-
         useEffect(() => {
-            const workRefCurrent = workRef.current
-            const observer = new IntersectionObserver(([entry]) => {
-                    setIsInView(entry.isIntersecting);
-                },
-                {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.5,
-                }
-                );
-
-                if( workRefCurrent) {
-                    observer.observe(workRef);
-                }
-
-                return () =>{
-                    if (workRefCurrent) {
-                        observer.unobserve(workRef);
+            const element = workRef.current; // This ensures you're working with the correct reference
+            if (!element) {
+                console.log("Element not found");
+                return;
+            }
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        console.log('Element is in view:', entry.target);
+                        setIsInView(true);
+                    } else {
+                        setIsInView(false);
                     }
-                };
-            }, []);
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5,
+            });
+        
+            observer.observe(element);
+        
+            // Cleanup function to unobserve the element when the component unmounts or the useEffect hook reruns
+            return () => observer.unobserve(element);
+        }, []);
+    
+    
 
                 useEffect(() => {
                     if (isInView && !hasAnimated.current) {

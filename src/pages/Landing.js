@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, {  useEffect, useRef } from 'react';
 import SelectedWork from '../components/SelectedWork.js';
 import Contact from '../components/Contact.js';
 // import downarrowImage from '../assests/downarrow.webp';
@@ -9,7 +9,7 @@ import { gsap } from 'gsap';
 function Landing ({ modeToggle, pColor, handleNavigation}) {
     const landingRef = useRef(null)
     const headerRef = useRef(null)
-    const workRef = useRef(null)
+    // const workRef = useRef(null)
 
 
 useEffect(() => { 
@@ -82,7 +82,7 @@ return (
                 className="text-7xl sm:text-[10vh] lg:text-[17vh] text-center"
             >
                 <h1 style={{ opacity: 0}} className="font-gothic">
-                    g.s.h. Grant Seth Harris
+                    Welcome to Grant's 
                 </h1>
                 <h1 style={{ opacity: 0}} className="font-gothic">
                      
@@ -104,7 +104,7 @@ return (
                     
                 </div>
                         <p className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
-                            Wow, I wasn't expecting you, come on in. Please don't mind the mess, can I get you a script? 
+                            I totally wasn't expecting you, come on in. Have a seat, can I get you a script? 
                         </p>
             </div>
                     {/* <div>
@@ -121,7 +121,7 @@ return (
         </div>
     </div>
     <SelectedWork
-        ref={workRef}
+        // ref={workRef}
         pColor={pColor}
         handleNavigation={handleNavigation}
         modeToggle={modeToggle}

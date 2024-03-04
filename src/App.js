@@ -52,19 +52,19 @@ function App() {
       <Bg modeToggle={modeToggle} /> *
        <Nav modeToggle={modeToggle} setModeToggle={setModeToggle} handleNavigation={handleNavigation} pColor={pColor}/>
        <Routes>
-        <Route path="/" element= {<Landing modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+        <Route path="/" element= {<Landing modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
         ></Route>
-        <Route path="/dreamerica" element = {<Dreamerica modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+        <Route path="/dreamerica" element = {<Dreamerica modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        > </Route>
-       <Route path="/deerkillpark" element = {<Deerkillpark modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+       <Route path="/deerkillpark" element = {<Deerkillpark modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
-        <Route path="/safecracker" element = {<Safecracker modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+        <Route path="/safecracker" element = {<Safecracker modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
-        <Route path="/wando" element = {<Wando modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+        <Route path="/wando" element = {<Wando modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
-        <Route path="/sabrina" element = {<Sabrina modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+        <Route path="/sabrina" element = {<Sabrina modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
-        <Route path="/finishedworks" element = {<FinishedWorks modetoggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+        <Route path="/finishedworks" element = {<FinishedWorks modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
        </Routes>
       
