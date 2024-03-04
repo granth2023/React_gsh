@@ -1,4 +1,4 @@
-import React, { useEffect, useRef , useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import ReactModal from 'react-modal'
 import { useNavigate } from 'react-router-dom'
 import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
@@ -15,29 +15,17 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
     const childrenRef = useRef(null)
     // const s3FileUrl = 'https://gshportfolio.s3.us-east-2.amazonaws.com/Deerkill+Park.pdf'
 
-    const [modalIsOpen, setModalIsOpen] = useState(false)
-    const [password, setPassword] = useState('');
-    const [documentUrl, setDocumentUrl] = useState('https://gshportfolio.s3.us-east-2.amazonaws.com/Deerkill+Park.pdf')
+   
+    const documentUrl = 'https://gshportfolio.s3.us-east-2.amazonaws.com/Deerkill+Park.pdf'
 
-    const openModal = () => {
-      setModalIsOpen(true);
-    };
-
-    const closeModal = () => {
-      setModalIsOpen(false);
-      setPassword('dkp');
+    const handledocumentAccess = () => {
+      const password = prompt("enter password")
+      if(password === "correct"){
+        window.open(documentUrl, '_blank')
+      } else {
+        alert("invalid password")
+      }
     }
-
-      const handlePasswordSubmit = async () => {
-        const response = await fetch('/api/validate-password', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ password })
-        })
-
-
     useEffect(() => {
         const elements = childrenRef.current.children 
         gsap.set(elements, { y:30, autoAlpha: 0})
@@ -81,21 +69,48 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         Dream Casting
         </h3>
         <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
-        Read the script!
+        
         </h3>
-        <button onClick ={openModal}>SCRIPT </button>
+        <button onClick ={handledocumentAccess}> click for sckript   </button>
+        
 
-        <ReactModal 
-          isOpen={modalIsOpen}
-          onRequestClsoe={closeModal}
-          contentLabel='Enter password'
-          className="Modal"
-          overlayClassName="Overlay"
-          >
-            <h2>Enter Password</h2>
-
-
-          </ReactModal>
+        {/* <ReactModal 
+  isOpen={modalIsOpen}
+  onRequestClose={closeModal}
+  style={{
+    overlay: {
+      backgroundColor: 'rgba(0, 0, 0, 0.75)'
+    },
+    content: {
+      color: 'lightsteelblue',
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      width: '50%',
+      border: '1px solid #ccc',
+      background: '#fff',
+      overflow: 'auto',
+      WebkitOverflowScrolling: 'touch',
+      borderRadius: '4px',
+      outline: 'none',
+      padding: '20px'
+    }
+  }}
+>
+  {console.log("Rednering Modal Content")}
+  <h2>Enter Password</h2>
+  <input 
+    type="password"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    onKeyPress={(e) => e.key === 'Enter' && handlePasswordSubmit()}
+  />
+  <button onClick={handlePasswordSubmit}>Submit</button>
+  <button onClick={closeModal}>Cancel</button>
+</ReactModal> */}
    {/* <div className="mt-12 text-center">
       
         <a href={s3FileUrl} target="_blank" rel="noopener noreferrer" className="text-lg sm:text-2xl font-roadway font-bold">
@@ -152,4 +167,3 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
    // add script
    //add synopsis
    //add dream casting
-   
