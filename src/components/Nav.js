@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+// import { useNavigate } from 'react-router-dom';
 import DarkSwitch from './DarkSwitch.js';
-import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
-import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
+// import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
+// import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
 import homeicon from '../assests/homeicon.webp'
 
 function Nav ({ 
@@ -13,7 +13,7 @@ function Nav ({
     pColor,
     handleNavigation 
 }) {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     return (
         <div>
@@ -25,14 +25,14 @@ function Nav ({
             }}
           >
             {modeToggle ? (
-              <img src={homeicon} 
+              <img src={homeicon} alt="HOME"
                 onClick={() => {
                   handleNavigation('/');
                 }}
                 className="site-logo h-9 w-9 cursor-pointer rounded-full hover-grow"
               />
             ) : (
-              <img src={homeicon}
+              <img src={homeicon} alt ="HOME"
                 onClick={() => {
                   handleNavigation('/');
                 }}

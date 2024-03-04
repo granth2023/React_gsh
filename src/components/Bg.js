@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import noiseTexture from '../assests/noiseTexture.png'
-import purplecurtains from '../assests/purplecurtains.jpeg'
-import opencurtains from '../assests/opencurtains.jpeg'
+// import noiseTexture from '../assests/noiseTexture.png'
+// import purplecurtains from '../assests/purplecurtains.jpeg'
+// import opencurtains from '../assests/opencurtains.jpeg'
 import redcurtains from '../assests/redcurtains.jpg'
 import bluecurtain from '../assests/bluecurtain.webp'
 //assest noise texture

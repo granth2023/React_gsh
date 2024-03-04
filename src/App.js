@@ -14,7 +14,7 @@ import Sabrina from './pages/Sabrina.js';
 import FinishedWorks from './pages/Finishedworks.js';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 
 function App() {

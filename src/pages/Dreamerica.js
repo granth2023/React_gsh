@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useRef } from 'react'
+// import { useNavigate } from 'react-router-dom'
 import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
 import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
 
@@ -9,7 +9,7 @@ import { gsap } from 'gsap'
 
 
 function Dreamerica({ modeToggle, pColor, handleNavigation }) {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const childrenRef = useRef(null)
 
   useEffect(() => {

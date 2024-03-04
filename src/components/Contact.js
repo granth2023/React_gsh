@@ -8,6 +8,8 @@ function Contact({ modetoggle, pColor }) {
     const hasAnimated = useRef(false)
 
     useEffect(() => {
+
+        const currentRef = contactRef.current
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setIsInView(entry.isIntersecting)
@@ -19,13 +21,13 @@ function Contact({ modetoggle, pColor }) {
             }
         )
 
-        if (contactRef.current) {
-            observer.observe(contactRef.current)
+        if (currentRef) {
+            observer.observe(currentRef)
         }
 
         return () => { 
-            if(contactRef.current) {
-                observer.unobserve(contactRef.current)
+            if(currentRef) {
+                observer.unobserve(currentRef)
             }
         }
     }, []);

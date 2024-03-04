@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import ReactModal from 'react-modal'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
 import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
 import dkp2 from '../assests/dkp2.webp'
@@ -11,7 +11,7 @@ import { gsap } from 'gsap'
 ReactModal.setAppElement('#root')
 
 function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const childrenRef = useRef(null)
     // const s3FileUrl = 'https://gshportfolio.s3.us-east-2.amazonaws.com/Deerkill+Park.pdf'
 
@@ -54,6 +54,7 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
           src={dkp2}
+          alt="gpt poster"
         />
       </div>
       <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
@@ -127,6 +128,7 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
+          alt="tur"
         //   src={crisol3}
         />
       </div>
@@ -134,6 +136,7 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
+          alt="tur"
         //   src={crisol4}
         />
       </div>
@@ -141,6 +144,7 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
+          alt="true"
         //   src={crisol2}
         />
       </div>

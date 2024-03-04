@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
 import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
 //side arrow 
@@ -7,7 +7,7 @@ import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
 import { gsap } from 'gsap'
 
 function FinishedWorks( { modeToggle, pColor, handleNavigation}) {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const childrenRef = useRef(null)
 
     useEffect(() => {
@@ -47,6 +47,7 @@ function FinishedWorks( { modeToggle, pColor, handleNavigation}) {
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
+          alt="alt"
         //   src={crisol1}
         />
       </div>
@@ -60,6 +61,7 @@ function FinishedWorks( { modeToggle, pColor, handleNavigation}) {
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
+          alt="alt"
         //   src={crisol3}
         />
       </div>
@@ -67,6 +69,7 @@ function FinishedWorks( { modeToggle, pColor, handleNavigation}) {
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
+          alt="alt"
         //   src={crisol4}
         />
       </div>
@@ -74,6 +77,7 @@ function FinishedWorks( { modeToggle, pColor, handleNavigation}) {
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
+          alt="alt"
         //   src={crisol2}
         />
       </div>

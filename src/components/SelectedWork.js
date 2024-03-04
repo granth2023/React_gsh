@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState} from 'react';
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 import { gsap } from 'gsap'
 
@@ -10,6 +10,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
         const hasAnimated = useRef(false);
 
         useEffect(() => {
+            const workRefCurrent = workRef.current
             const observer = new IntersectionObserver(([entry]) => {
                     setIsInView(entry.isIntersecting);
                 },
@@ -20,13 +21,13 @@ function SelectedWork({ modeToggle, pColor, handleNavigation}){
                 }
                 );
 
-                if( workRef.current) {
-                    observer.observe(workRef.current);
+                if( workRefCurrent) {
+                    observer.observe(workRef);
                 }
 
                 return () =>{
-                    if (workRef.current) {
-                        observer.unobserve(workRef.current);
+                    if (workRefCurrent) {
+                        observer.unobserve(workRef);
                     }
                 };
             }, []);

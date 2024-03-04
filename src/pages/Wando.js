@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
 import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
 //side arrow 
@@ -7,7 +7,7 @@ import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
 import { gsap } from 'gsap'
 
 function Wando( { modeToggle, pColor, handleNavigation}) {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const childrenRef = useRef(null)
 
     useEffect(() => {
@@ -38,6 +38,7 @@ function Wando( { modeToggle, pColor, handleNavigation}) {
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
         //   src={crisol1}
+        alt="alt"
         />
       </div>
       <p className="font-roadway mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
@@ -48,6 +49,7 @@ function Wando( { modeToggle, pColor, handleNavigation}) {
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
         //   src={crisol3}
+        alt="alt"
         />
       </div>
       <div className="flex justify-center mt-20">
@@ -55,12 +57,14 @@ function Wando( { modeToggle, pColor, handleNavigation}) {
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
         //   src={crisol4}
+        alt="alt"
         />
       </div>
       <div className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
+          alt="alt"
         //   src={crisol2}
         />
       </div>
