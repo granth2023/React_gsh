@@ -79,10 +79,10 @@ return (
         <div> 
             <div 
                 ref={headerRef}
-                className="text-7xl sm:text-[10vh] lg:text-[17vh] text-center"
+                className="text-5xl sm:text-[12vh] lg:text-[12vh] text-center"
             >
                 <h1 style={{ opacity: 0}} className="font-gothic">
-                    Oh! Hello! I totally wasn't expecting you on my custom made portfolio website. Let's see what I can pull together in an instant...
+                    Grant Seth Harris
                 </h1>
                 <h1 style={{ opacity: 0}} className="font-gothic">
                      
@@ -103,9 +103,12 @@ return (
                         <div className="flex flex-col font-bold">
                     
                 </div>
-                        <p className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
-                            One moment, just getting together a quick little colleciton of spec scripts, adaptations, and original psychological satirical dramas...
-                        </p>
+                        <h3 className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
+                           Oh Wow! I totally wasn't expecting you. 
+                        </h3>
+                        <h3 className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
+                           Please come in, make yourself at home.  
+                        </h3>
             </div>
                     {/* <div>
                         {modeToggle ?(
