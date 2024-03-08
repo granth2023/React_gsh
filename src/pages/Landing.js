@@ -104,7 +104,7 @@ return (
                     
                 </div>
                         <h3 className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
-                           Oh Wow! I totally wasn't expecting you. 
+                           Oh wow! I totally wasn't expecting you. 
                         </h3>
                         <h3 className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
                            Please come in, make yourself at home.  
