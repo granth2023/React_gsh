@@ -79,7 +79,7 @@ return (
         <div> 
             <div 
                 ref={headerRef}
-                className="text-5xl sm:text-[12vh] lg:text-[12vh] text-center"
+                className="text-5xl sm:text-[16vh] lg:text-[18vh] text-center"
             >
                 <h1 style={{ opacity: 0}} className="font-SnellRoundhand-Bold">
                     Grant Seth Harris
@@ -103,12 +103,12 @@ return (
                         <div className="flex flex-col font-bold">
                     
                 </div>
-                        <h3 className=" pt-8 text-xs sm:text-8xl text-left font-gothic w-full sm:w-/4 lg:w-5/6 mx-auto leading-loose">
-                           Writer | Director  
+                {/* <h3 className="pt-9 text-10xl sm:text-9xl text-center font-gothic w-full sm:w-4/4 lg:w-6/6 mx-auto leading-loose" >
+  Writer | Director
+</h3> */}
+                        <h3 className=" pt-8 text-xs sm:text-6xl text-center font-gothic w-full sm:w-3/4 lg:w-6/6 mx-auto leading-loose">
+                           New York based filmmaker, from New Jersey, creating originals, specs, adaptations, and shorts. 
                         </h3>
-                        {/* <h3 className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
-                           Please come in, make yourself at home.  
-                        </h3> */}
             </div>
                     {/* <div>
                         {modeToggle ?(

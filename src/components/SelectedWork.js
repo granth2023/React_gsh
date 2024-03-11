@@ -73,7 +73,7 @@ function SelectedWork({  pColor, handleNavigation}){
                                 }}
                                 className=" pb-2 mt-16 border-b-1  cursor-pointer "
                             >
-                                Dreamerica (Movie)
+                                Dreamerica 
                             </li>
                             <li 
                                 onClick ={() => handleNavigation('/deerkillpark')}
@@ -83,7 +83,7 @@ function SelectedWork({  pColor, handleNavigation}){
                                 }}
                                 className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
-                                Deerkill Park (Television)
+                                Deerkill Park 
                             </li>
                             <li 
                                 onClick ={() => handleNavigation('/safecracker')}
@@ -93,7 +93,7 @@ function SelectedWork({  pColor, handleNavigation}){
                                 }}
                                 className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
-                                Safecracker (WIP)
+                                Safecracker 
                             </li>
                             <li 
                                 onClick ={() => handleNavigation('/wando')}
@@ -103,7 +103,7 @@ function SelectedWork({  pColor, handleNavigation}){
                                 }}
                                 className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
-                                Wando, Slim, The Light Within (WIP)
+                                Wando, Slim, The Light Within 
                             </li>
                             <li 
                                 onClick ={() => handleNavigation('/sabrina')}
@@ -113,7 +113,7 @@ function SelectedWork({  pColor, handleNavigation}){
                                 }}
                                 className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
-                               Sabrina (WIP)
+                               Sabrina 
                             </li>
                             <li 
                                 onClick ={() => handleNavigation('/finishedworks')}
@@ -123,7 +123,7 @@ function SelectedWork({  pColor, handleNavigation}){
                                 }}
                                 className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
-                                Finished Works ( 2 Items)
+                                Finished Works 
                             </li>
                             
                          </ul>
