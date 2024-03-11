@@ -81,7 +81,7 @@ return (
                 ref={headerRef}
                 className="text-5xl sm:text-[12vh] lg:text-[12vh] text-center"
             >
-                <h1 style={{ opacity: 0}} className="font-gothic">
+                <h1 style={{ opacity: 0}} className="font-SnellRoundhand-Bold">
                     Grant Seth Harris
                 </h1>
                 <h1 style={{ opacity: 0}} className="font-gothic">
@@ -103,12 +103,12 @@ return (
                         <div className="flex flex-col font-bold">
                     
                 </div>
-                        <h3 className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
-                           Oh wow! I totally wasn't expecting you. 
+                        <h3 className=" pt-8 text-xs sm:text-8xl text-left font-gothic w-full sm:w-/4 lg:w-5/6 mx-auto leading-loose">
+                           Writer | Director  
                         </h3>
-                        <h3 className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
+                        {/* <h3 className=" pt-8 text-xs sm:text-4xl text-left font-roadway w-full sm:w-3/4 lg:w-5/6 mx-auto leading-loose">
                            Please come in, make yourself at home.  
-                        </h3>
+                        </h3> */}
             </div>
                     {/* <div>
                         {modeToggle ?(

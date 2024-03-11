@@ -22,7 +22,9 @@ module.exports = {
         },
         fontFamily: {
           'roadway': ['roadway', 'sans-serif'],
-          'gothic': ['gothic', 'serif']
+          'gothic': ['gothic', 'serif'],
+          'SnellRoundhand': ['SnellRoundhand',  'serif'],
+          'SnellRoundhand-Bold': ['SnellRoundhand-Bold', 'serif']
         },
         fontWeight: {
           'regular': 400,

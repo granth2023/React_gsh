@@ -64,7 +64,7 @@ function Contact({ modetoggle, pColor }) {
                         
                 
                     <a href="mailto:turkeyroll.grant@gmail.com">
-                        <h2 className="pb-2 cursor-pointer">email me here</h2>
+                        <h2 className="pb-2 cursor-pointer">You</h2>
                     </a>
                     
        

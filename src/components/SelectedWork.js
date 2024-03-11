@@ -61,10 +61,10 @@ function SelectedWork({  pColor, handleNavigation}){
                 return ( 
                     <div className="mt-40 lg:mt-64">
                         <div className="flex justify-between"> 
-                            <h2 className="font-roadway font-bold text-lg sm:text-4xl">Can I interest you in a story?</h2>
+                            <h2 className="font-gothic font-bold text-lg sm:text-8xl">Enter a Story</h2>
                            
                          </div>
-                         <ul className='font-gothic text-5xl sm:text-5xl' ref={workRef}>
+                         <ul className='font-SnellRoundhand-Bold text-5xl sm:text-5xl' ref={workRef}>
                             <li 
                                 onClick={() => handleNavigation('/dreamerica')}
                                 style={{
