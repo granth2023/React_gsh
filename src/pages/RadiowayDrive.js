@@ -13,6 +13,8 @@ function radiowayDrive ( { modeToggle, pColor, handleNavigation}) {
 
     useEffect(() => {
         const elements = childrenRef.current.children 
+        gsap.set(elements, {y:30, autoAlpha: 0})
+
         
     }) 
 }
