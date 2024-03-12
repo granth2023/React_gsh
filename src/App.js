@@ -12,6 +12,7 @@ import Safecracker from './pages/Safecracker.js';
 import Wando from './pages/Wando.js';
 import Sabrina from './pages/Sabrina.js';
 import FinishedWorks from './pages/Finishedworks.js';
+import RadiowayDrive from './pages/RadiowayDrive.js';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import React, { useState, useEffect } from 'react'
@@ -65,6 +66,8 @@ function App() {
         <Route path="/sabrina" element = {<Sabrina modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
         <Route path="/finishedworks" element = {<FinishedWorks modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
+       ></Route>
+       <Route path="/radiowaydrive" element = {<RadiowayDrive modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
        </Routes>
       
