@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import pidgeon from '../assests/pidgeon.webp'
 import { gsap } from 'gsap';
 
 
@@ -68,7 +69,9 @@ function Contact({ modetoggle, pColor }) {
                         
                    
                     <a href="mailto:turkeyroll.grant@gmail.com">
-                        <h2 className="pb-2 cursor-pointer">MESSAGE ME</h2>
+                    <img src={pidgeon} alt = "email" 
+                      
+                        className="site-logo h-40 w-40 cursor-pointer rounded-full hover-grow"/>
                     </a>
                     
        
