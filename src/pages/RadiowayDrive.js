@@ -39,7 +39,7 @@ function RadiowayDrive ( { modeToggle, pColor, handleNavigation}) {
         className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 ">
       <h2 className="text-7xl text-center sm:text-8xl  lg:text-8xl xl:text-9xl  font-SnellRoundhand-Bold">Radioway Drive</h2>
       <h3 className="text-lg sm:text-5xl text-center font-gothic  font-bold italic mt-12">
-        Turnnnnn!  
+        Turrrrrnnnn!  
       </h3>
       <div className="flex justify-center mt-12">
         <img
@@ -59,7 +59,7 @@ function RadiowayDrive ( { modeToggle, pColor, handleNavigation}) {
         Synopsis
         </h3>
         <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
-        Dream Casting
+         Credits
         </h3>
         <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
         
@@ -75,7 +75,7 @@ function RadiowayDrive ( { modeToggle, pColor, handleNavigation}) {
         When I decided I wanted to create an audioplay, these were the ideas that eventually combined into Radioway Drive. There are several ideas here that I've always been fascinated with. The first is a radio talk show host for a couple reasons. One, as an idea I find it clever because they are forced to be expositional but in an effort to not be dramatically expositional it's a fun line to straddle. Second, I grew in cars hearing radio talk shows and it's alwways been a sound that's very familiar to me and a natural way to set a mood.  I've also always loved when music is controlled within a story itself and thought it would be fun to bring a manic energy to it where not only does our character toggle between different station but the audience is always tuned in and out of the minds of the people in the story. This project was also an experiment in 'filmmaking' process itself as the way the script was ordered wasn't exactly working right once I got into editing and after a prolonged series of test cases, I found an order that felt emotionally and logically exciting while keeping the original anxious energy that helped drive the writing process. 
    
       </h4>
-      <div className="flex justify-center mt-20">
+      {/* <div className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
@@ -98,7 +98,7 @@ function RadiowayDrive ( { modeToggle, pColor, handleNavigation}) {
           alt="true"
         //   src={crisol2}
         />
-      </div>
+      </div> */}
       <div>
         <div className='flex flex-col font-gothic text-6xl mt-40 mb-40 justify-center items-center leading-snug'>
           <div onClick={() => handleNavigation('/')} className='flex cursor-pointer'>

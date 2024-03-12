@@ -115,16 +115,7 @@ function SelectedWork({  pColor, handleNavigation}){
                             >
                                Sabrina 
                             </li>
-                            <li 
-                                onClick ={() => handleNavigation('/finishedworks')}
-                                style={{
-                                    borderBottom: `1px solid ${pColor}`,
-                                    opacity: 0 
-                                }}
-                                className="pb-2 mt-16 border-b-1 cursor-pointer"
-                            >
-                                Finished Works 
-                            </li>
+                          
                             <li 
                                 onClick ={() => handleNavigation('/radiowaydrive')}
                                 style={{
@@ -134,6 +125,16 @@ function SelectedWork({  pColor, handleNavigation}){
                                 className="pb-2 mt-16 border-b-1 cursor-pointer"
                             >
                                 Radioway Drive
+                            </li>
+                            <li 
+                                onClick ={() => handleNavigation('/finishedworks')}
+                                style={{
+                                    borderBottom: `1px solid ${pColor}`,
+                                    opacity: 0 
+                                }}
+                                className="pb-2 mt-16 border-b-1 cursor-pointer"
+                            >
+                                Side Quests
                             </li>
                             
                          </ul>

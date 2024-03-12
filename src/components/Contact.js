@@ -58,17 +58,17 @@ function Contact({ modetoggle, pColor }) {
                 </div>
                 <div
                     ref={contactRef}
-                    className="flex flex-col mt-16 sm:mt-24 items-center font-gothic text-3xl sm:text-5xl"
+                    className="flex flex-col mt-16 sm:mt-24 items-center font-SnellRoundhand-Bold text-3xl sm:text-5xl"
                 >
-                    <div style={{opacity: 0}} className="flex">
+                    {/* <div style={{opacity: 0}} className="flex">
 
                     <h2 className='pb-2 cursor-pointer'>Me</h2>
-                    </div>
+                    </div> */}
                     <div style={{opacity: 0}} className="flex">
                         
                    
                     <a href="mailto:turkeyroll.grant@gmail.com">
-                        <h2 className="pb-2 cursor-pointer">You</h2>
+                        <h2 className="pb-2 cursor-pointer">MESSAGE ME</h2>
                     </a>
                     
        

@@ -29,7 +29,7 @@ function FinishedWorks( { modeToggle, pColor, handleNavigation}) {
         ref={childrenRef} 
         style={{ color: pColor }} 
         className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 ">
-      <h2 className="text-5xl sm:text-8xl font-gothic">Finished Works</h2>
+      <h2 className="text-5xl sm:text-8xl font-gothic">Side Quests</h2>
       <h3 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
       Driveway Radio 
       </h3>
