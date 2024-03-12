@@ -23,5 +23,7 @@ function radiowayDrive ( { modeToggle, pColor, handleNavigation}) {
             ease: 'easeInOut',
             overwrite:'auto'
         })
-    }) 
+    }, []) 
+
+    
 }
