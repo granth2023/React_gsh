@@ -15,6 +15,13 @@ function radiowayDrive ( { modeToggle, pColor, handleNavigation}) {
         const elements = childrenRef.current.children 
         gsap.set(elements, {y:30, autoAlpha: 0})
 
-        
+        gsap.to(elements, {
+            y:0,
+            autoalpha: 1,
+            stagger: 0.4,
+            duration: 1,
+            ease: 'easeInOut',
+            overwrite:'auto'
+        })
     }) 
 }
