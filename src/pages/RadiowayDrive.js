@@ -11,6 +11,8 @@ function radiowayDrive ( { modeToggle, pColor, handleNavigation}) {
     const childrenRef = useRef(null)
     const documentUrl = 'https://gshportfolio.s3.us-east-2.amazonaws.com/Radio+Driveway.MP4'
 
-
-
+    useEffect(() => {
+        const elements = childrenRef.current.children 
+        
+    }) 
 }
