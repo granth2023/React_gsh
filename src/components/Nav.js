@@ -4,8 +4,9 @@ import DarkSwitch from './DarkSwitch.js';
 // import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
 // import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
 import homeicon from '../assests/homeicon.webp'
-
+//set up nav bar 
 function Nav ({ 
+  //include structures 
     modeToggle, 
     setModeToggle,
     isMenuOpen,
