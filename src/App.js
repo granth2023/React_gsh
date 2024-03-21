@@ -8,7 +8,7 @@ import Nav from './components/Nav.js'
 import Landing from './pages/Landing.js';
 import Dreamerica from './pages/Dreamerica.js';
 import Deerkillpark from './pages/DeerkillPark.js';
-import Safecracker from './pages/Safecracker.js';
+// import Safecracker from './pages/Safecracker.js';
 import Wando from './pages/Wando.js';
 import Sabrina from './pages/Sabrina.js';
 import FinishedWorks from './pages/Finishedworks.js';
@@ -59,8 +59,8 @@ function App() {
        > </Route>
        <Route path="/deerkillpark" element = {<Deerkillpark modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
-        <Route path="/safecracker" element = {<Safecracker modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
-       ></Route>
+        {/* <Route path="/safecracker" element = {<Safecracker modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>} */}
+       {/* </Route> */}
         <Route path="/wando" element = {<Wando modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
        ></Route>
         <Route path="/sabrina" element = {<Sabrina modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}
