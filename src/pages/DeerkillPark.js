@@ -58,16 +58,16 @@ function Deerkillpark( { modeToggle, pColor, handleNavigation}) {
         />
       </div>
       <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
-        Logline
+      Teaser
         </h3>
         <h4 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
-   The future of a northeastern suburban town is upended when one of its' local citizens is directed by his clairvoyant doppelganger to seize power. 
+        With his clairveyoant alter-ego telling him how to attain power through his dreams, a small town citizen and family become part of a troubling dark force that lives within their suburban paradise. 
       </h4>
-      <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
-        Synopsis
+      <h3 className="text-lg sm:text-4xl font-gothic font-bold italic mt-12">
+        Log from Deerkill Park september 19-26
         </h3>
         <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
-        Dream Casting
+        Log from Deerkill Park October - December 
         </h3>
         <h3 className="text-lg sm:text-4xl font-gothic font-bold mt-12">
         
