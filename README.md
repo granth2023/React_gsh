@@ -23,10 +23,6 @@ A robust platform for securely managing and serving project files, leveraging Mo
 - Access project details by navigating to `/project/:projectId`.
 - Secure files can be accessed after providing the correct access password.
 
-## Contributing
-
-We welcome contributions to improve this project. Please follow the standard fork-pull request workflow.
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
