@@ -82,7 +82,7 @@ return (
                 className="text-5xl sm:text-[16vh] lg:text-[18vh] text-center"
             >
                 <h1 style={{ opacity: 0}} className="font-SnellRoundhand-Bold">
-                    Grant Seth Harris
+                   Seth Rosenthal
                 </h1>
                 <h1 style={{ opacity: 0}} className="font-gothic">
                      
@@ -107,7 +107,7 @@ return (
   Writer | Director
 </h3> */}
                         <h3 className=" pt-8 text-xs sm:text-6xl text-center font-gothic w-full sm:w-3/4 lg:w-6/6 mx-auto leading-loose">
-                           New York based filmmaker, from New Jersey, creating originals, specs, adaptations, and shorts. 
+                           Artist writing original feature films, spec scripts adapted from podcasts, adapatations of books, and other short content. 
                         </h3>
             </div>
                     {/* <div>
