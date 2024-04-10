@@ -1,90 +1,80 @@
-import React, { useRef, useState, useEffect } from 'react';
-import pidgeon from '../assests/pidgeon.webp'
-import { gsap } from 'gsap';
-
+import React, { useRef, useState, useEffect } from "react";
+import pidgeon from "../assests/pidgeon.webp";
+import { gsap } from "gsap";
 
 function Contact({ modetoggle, pColor }) {
-    const contactRef = useRef(null) 
-    const [isInView, setIsInView] = useState(false)
-    const hasAnimated = useRef(false)
+  const contactRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+  const hasAnimated = useRef(false);
 
-    useEffect(() => {
+  useEffect(() => {
+    const currentRef = contactRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+      }
+    );
 
-        const currentRef = contactRef.current
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsInView(entry.isIntersecting)
-            },
-            {
-                root: null, 
-                rootMargin: '0px',
-                threshold: 0.5
-            }
-        )
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
 
-        if (currentRef) {
-            observer.observe(currentRef)
-        }
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
 
-        return () => { 
-            if(currentRef) {
-                observer.unobserve(currentRef)
-            }
-        }
-    }, []);
-        
-        useEffect(() => {
-            if (isInView && !hasAnimated.current) {
-                const elements = contactRef.current.children 
-                gsap.set(elements, { y:'-30%', autoAlpha: 0 })
+  useEffect(() => {
+    if (isInView && !hasAnimated.current) {
+      const elements = contactRef.current.children;
+      gsap.set(elements, { y: "-30%", autoAlpha: 0 });
 
-                gsap.to(elements, {
-                    y: '0%',
-                    autoAlpha: 1,
-                    stagger: 0.4,
-                    duration: 1,
-                    ease: 'power2.out',
-                    overwrite: 'auto'
-                })
+      gsap.to(elements, {
+        y: "0%",
+        autoAlpha: 1,
+        stagger: 0.4,
+        duration: 1,
+        ease: "power2.out",
+        overwrite: "auto",
+      });
 
-                hasAnimated.current = true
-            }
-        }, [isInView])
+      hasAnimated.current = true;
+    }
+  }, [isInView]);
 
-        return ( 
-            <div className='mt-40 sm:mt-60 mb-20 lg:mb-40'>
-                <div className="flex justify-between">
-                    <h2 className="font-roadway font-bold text-lg sm:text-4xl"> </h2>
-                    
-                </div>
-                <div
-                    ref={contactRef}
-                    className="flex flex-col mt-16 sm:mt-24 items-center font-SnellRoundhand-Bold text-3xl sm:text-5xl"
-                >
-                    {/* <div style={{opacity: 0}} className="flex">
+  return (
+    <div className="mt-40 sm:mt-60 mb-20 lg:mb-40">
+      <div className="flex justify-between">
+        <h2 className="font-roadway font-bold text-lg sm:text-4xl"> </h2>
+      </div>
+      <div
+        ref={contactRef}
+        className="flex flex-col mt-16 sm:mt-24 items-center font-SnellRoundhand-Bold text-3xl sm:text-5xl"
+      >
+        {/* <div style={{opacity: 0}} className="flex">
 
                     <h2 className='pb-2 cursor-pointer'>Me</h2>
                     </div> */}
-                    <div style={{opacity: 0}} className="flex">
-                        
-                   
-                    <a href="mailto:turkeyroll.grant@gmail.com">
-                    <img src={pidgeon} alt = "email" 
-                      
-                        className="site-logo h-40 w-40 cursor-pointer rounded-full hover-grow"/>
-                    </a>
-                    
-       
-                    </div>
-                    <div style={{opacity: 0}} className="flex mt-3 sm:mt-8">
-                   
-                    </div>
-                    </div>
+        <div style={{ opacity: 0 }} className="flex">
+          <a href="mailto:turkeyroll.grant@gmail.com">
+            <img
+              src={pidgeon}
+              alt="email"
+              className="site-logo h-40 w-40 cursor-pointer rounded-full hover-grow"
+            />
+          </a>
+        </div>
+        <div style={{ opacity: 0 }} className="flex mt-3 sm:mt-8"></div>
+      </div>
+    </div>
+  );
+}
 
-
-                </div>
-            
-        )
-        }
-
-export default Contact 
+export default Contact;

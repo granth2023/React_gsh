@@ -1,8 +1,8 @@
 import express from 'express';
 import AWS from './config/awsConfig.js';
-import upload from './middleware.js'; // Ensure this path correctly points to your upload middleware
+import upload from './middleware.js'; 
 import fs from 'fs';
-import Project from './models.js'; // Ensure this path is correct
+import Project from './models.js'; 
 
 const router = express.Router();
 

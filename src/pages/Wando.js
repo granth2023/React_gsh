@@ -1,63 +1,54 @@
-import React, { useEffect, useRef } from 'react'
-// import { useNavigate } from 'react-router-dom'
-import { ReactComponent as SideArrow } from '../assests/sitesidearrow.svg'
-import { ReactComponent as SideArrow2 } from '../assests/sitesidearrow2.svg'
-//side arrow 
+import React, { useEffect, useRef } from "react";
 
-import { gsap } from 'gsap'
+import { ReactComponent as SideArrow } from "../assests/sitesidearrow.svg";
+import { ReactComponent as SideArrow2 } from "../assests/sitesidearrow2.svg";
 
-function Wando( { modeToggle, pColor, handleNavigation}) {
-    // const navigate = useNavigate()
-    const childrenRef = useRef(null)
+import { gsap } from "gsap";
 
-    useEffect(() => {
-        const elements = childrenRef.current.children 
-        gsap.set(elements, { y:30, autoAlpha: 0})
+function Wando({ modeToggle, pColor, handleNavigation }) {
+  const childrenRef = useRef(null);
 
-        gsap.to(elements, {
-            y: 0,
-            autoAlpha: 1,
-            stagger: 0.4,
-            duration: 1,
-            ease: 'easeInOut',
-            overwrite: 'auto',
-        })
-    }, [])
+  useEffect(() => {
+    const elements = childrenRef.current.children;
+    gsap.set(elements, { y: 30, autoAlpha: 0 });
 
-    return (
-        <div 
-        ref={childrenRef} 
-        style={{ color: pColor }} 
-        className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 ">
-      <h2 className="text-5xl sm:text-8xl font-gothic">Wando, Slim, & the Light Within</h2>
+    gsap.to(elements, {
+      y: 0,
+      autoAlpha: 1,
+      stagger: 0.4,
+      duration: 1,
+      ease: "easeInOut",
+      overwrite: "auto",
+    });
+  }, []);
+
+  return (
+    <div
+      ref={childrenRef}
+      style={{ color: pColor }}
+      className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 "
+    >
+      <h2 className="text-5xl sm:text-8xl font-gothic">
+        Wando, Slim, & the Light Within
+      </h2>
       <h3 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
-       Animated movie, coming of age family adventure 
+        Animated movie, coming of age family adventure
       </h3>
       <div className="flex justify-center mt-12">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
-        //   src={crisol1}
-        alt="alt"
+          alt="alt"
         />
       </div>
       <p className="font-roadway mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
-   story
+        story
       </p>
       <div className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
-        //   src={crisol3}
-        alt="alt"
-        />
-      </div>
-      <div className="flex justify-center mt-20">
-        <img
-          style={{ borderColor: pColor }}
-          className="border-[1px] w-fit h-auto"
-        //   src={crisol4}
-        alt="alt"
+          alt="alt"
         />
       </div>
       <div className="flex justify-center mt-20">
@@ -65,23 +56,43 @@ function Wando( { modeToggle, pColor, handleNavigation}) {
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
           alt="alt"
-        //   src={crisol2}
+        />
+      </div>
+      <div className="flex justify-center mt-20">
+        <img
+          style={{ borderColor: pColor }}
+          className="border-[1px] w-fit h-auto"
+          alt="alt"
         />
       </div>
       <div>
-        <div className='flex flex-col font-gothic text-6xl mt-40 mb-40 justify-center items-center leading-snug'>
-          <div onClick={() => handleNavigation('/')} className='flex cursor-pointer'>
-          {modeToggle ? <SideArrow2 className='h-10 mt-4 mr-2'/> : <SideArrow className='h-10 mt-4 mr-2'/>}
-          <h2>Home&emsp;</h2>
+        <div className="flex flex-col font-gothic text-6xl mt-40 mb-40 justify-center items-center leading-snug">
+          <div
+            onClick={() => handleNavigation("/")}
+            className="flex cursor-pointer"
+          >
+            {modeToggle ? (
+              <SideArrow2 className="h-10 mt-4 mr-2" />
+            ) : (
+              <SideArrow className="h-10 mt-4 mr-2" />
+            )}
+            <h2>Home&emsp;</h2>
           </div>
-          <div onClick={() => handleNavigation('/sabrina')} className='flex cursor-pointer'>
-          <h2>&emsp;Next</h2>
-          {modeToggle ? <SideArrow2 className='h-10 mt-4 ml-2 rotate-180'/> : <SideArrow className='h-10 mt-4 ml-2 rotate-180'/>}
+          <div
+            onClick={() => handleNavigation("/sabrina")}
+            className="flex cursor-pointer"
+          >
+            <h2>&emsp;Next</h2>
+            {modeToggle ? (
+              <SideArrow2 className="h-10 mt-4 ml-2 rotate-180" />
+            ) : (
+              <SideArrow className="h-10 mt-4 ml-2 rotate-180" />
+            )}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-   export default Wando 
+export default Wando;
