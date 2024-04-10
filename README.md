@@ -127,10 +127,44 @@ or
 yarn start
 ```
 
-## Deployment
+## Deployment on Netlify
 
-<Instructions on how to deploy the project, including any specific deployment platform details. Mention any environment variables that need to be set.>
+- **Create a netlify.toml File:** This file will specify your build settings and publish directory for Netlify. Create a netlify.toml in your project's root directory with the following content:
+```
+toml
+Copy code
+[build]
+  command = "npm run build"
+  publish = "build"
+  functions = "functions"
+
+[build.environment]
+  NODE_VERSION = "14.17.0"
+Adjust the command and publish directory as needed based on your project's build process.
+```
+**Set Up Environment Variables:** Netlify allows you to set environment variables through their UI. Go to your site's settings on Netlify, and under "Build & deploy", find "Environment" to add your variables:
+
+```
+REACT_APP_API_URL - Your backend API URL if applicable.
+AWS_ACCESS_KEY_ID - Your AWS access key for S3 integration.
+AWS_SECRET_ACCESS_KEY - Your AWS secret access key.
+AWS_REGION - The AWS region your S3 bucket is in.
+Any other environment variables your project relies on.
+Deploying with Netlify
+Push Your Code to GitHub: Ensure your project is pushed to a GitHub repository.
+```
+
+**Create a New Site on Netlify:** Log in to your Netlify account and select "New site from Git". Choose GitHub as the Continuous Deployment provider and select your project repository.
+
+**Configure Your Build Settings:** Netlify will attempt to automatically detect your build settings but ensure they match the netlify.toml file you created. If you set environment variables in the Netlify UI, they will automatically be used during the build process.
+
+**Deploy:** Once your build settings are configured, click "Deploy site". Netlify will build your project and deploy it. Upon successful deployment, you will receive a unique Netlify URL to access your site.
+
+
+**Monitoring Your Site**
+Netlify Dashboard: Provides insights into your site's builds, deploy previews, form submissions, and more.
+Logs: Check the "Deploys" tab on your Netlify site dashboard to view build logs for troubleshooting.
 
 ## Deployed Link
 
-[Click here to view the project](#)
+[Click here to view the project](https://grantsethharris.netlify.app/)
