@@ -8,6 +8,10 @@
 
 The primary goal of this project is to create an immersive and navigable user interface that effectively displays selected works, incorporating dynamic animations and transitions to enhance user engagement. It aims to highlight my proficiency in React, GSAP for animations, and my creative approach to web development.
 
+## Deployed Link
+
+[Click here to view the project](https://grantsethharris.netlify.app/)
+
 ## Features
 
 - **Dynamic Landing Page**: Utilizes React and GSAP to animate elements, providing a visually engaging introduction.
@@ -166,6 +170,4 @@ Push Your Code to GitHub: Ensure your project is pushed to a GitHub repository.
 Netlify Dashboard: Provides insights into your site's builds, deploy previews, form submissions, and more.
 Logs: Check the "Deploys" tab on your Netlify site dashboard to view build logs for troubleshooting.
 
-## Deployed Link
 
-[Click here to view the project](https://grantsethharris.netlify.app/)
