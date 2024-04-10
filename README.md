@@ -3,9 +3,8 @@
 
 ## Introduction
 
-**Artist Portfolio** is a React-based web application designed to showcase my skills in interactive web development, animation with GSAP, and building engaging user experiences. This project serves as a portfolio piece, demonstrating my capability to conceptualize, design, and implement advanced web features.
+**Artist Portfolio** is a React-based web application designed to showcase an artists' business with interactive web development, animation with GSAP, and building engaging user experiences. 
 
-## Purpose
 
 The primary goal of this project is to create an immersive and navigable user interface that effectively displays selected works, incorporating dynamic animations and transitions to enhance user engagement. It aims to highlight my proficiency in React, GSAP for animations, and my creative approach to web development.
 
@@ -16,25 +15,6 @@ The primary goal of this project is to create an immersive and navigable user in
 - **Advanced Navigation**: Implements smooth transitions between pages, enhancing the overall user experience.
 - **Responsive Design**: Ensures a seamless experience across various devices and screen sizes.
 - **Dark/Light Mode**: Offers users the ability to toggle between themes, demonstrating attention to user preferences.
-
-## Stretch Goals
-
-- **Enhanced Subpages**: Develop subpages for each selected work, including loglines, synopses, and additional content, creating a deeper dive into each project.
-
-```javascript
-useEffect(() => {
-    const elements = workRef.current.children;
-    gsap.set(elements, { x: '100%', autoAlpha: 0 });
-    gsap.to(elements, { 
-        x: '0%',
-        autoAlpha: 1,
-        stagger: 0.3,
-        duration: 0.6,
-        ease: 'power2.out',
-        overwrite: 'auto',
-    });
-}, []);
-```
 
 - **Seamless Media Handling with AWS S3**: Integrates AWS S3 for efficient storage and retrieval of media assets, ensuring a responsive user experience.
 - **Reliable Data Management with MongoDB**: Utilizes MongoDB to store and manage application data, offering scalable and flexible data structuring.
@@ -81,6 +61,27 @@ export const accessProtectedFile = async (req, res) => {
     }
 };
 ```
+
+## Stretch Goals
+
+- **Enhanced Subpages**: Develop subpages for each selected work, including loglines, synopses, and additional content, creating a deeper dive into each project.
+
+```javascript
+useEffect(() => {
+    const elements = workRef.current.children;
+    gsap.set(elements, { x: '100%', autoAlpha: 0 });
+    gsap.to(elements, { 
+        x: '0%',
+        autoAlpha: 1,
+        stagger: 0.3,
+        duration: 0.6,
+        ease: 'power2.out',
+        overwrite: 'auto',
+    });
+}, []);
+```
+
+
 
 ## Getting Started
 
