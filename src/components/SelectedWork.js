@@ -142,7 +142,9 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
         </li>
       </ul>
       <p className="text-center mt-16 font-gothic font-bold text-5xl italic">
-       I live in Brooklyn, New York and  my favorite genre to write is psychological mysteries. I love movies by David Lynch, Stanley Kubrick, Steven Spielberg, and Paul Thomas Anderson. My favorite television shows are Twin Peaks, The Sopranos, Mad Men, Succession and 30 Rock. My background is in filmmaking, theater, and long form improv. I'm originally from New Jersey and went to the University of Miami, graduating in 2015. I also love baseball, music, and lately, cooking.     
+       I live in Brooklyn, New York and  my favorite genre to write is psychological mysteries. 
+       <br /><br />I love movies by David Lynch, Stanley Kubrick, Steven Spielberg, and Paul Thomas Anderson. My favorite television shows are Twin Peaks, The Sopranos, Mad Men, Succession and 30 Rock.     <br /><br /> My background is in filmmaking, theater, and long form improv. I'm originally from New Jersey and went to the University of Miami, graduating in 2015.
+       <br /><br /> I also love baseball, music, and lately, cooking.     
       </p>
     </div>
   );
