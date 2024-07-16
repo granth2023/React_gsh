@@ -1,11 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
-
 import { gsap } from "gsap";
 
-function SelectedWork({ pColor, handleNavigation }) {
+function SelectedWork({ pColor, handleNavigation, photoRef }) {
   const workRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
   const hasAnimated = useRef(false);
+
   useEffect(() => {
     const element = workRef.current;
     if (!element) {
@@ -54,27 +54,51 @@ function SelectedWork({ pColor, handleNavigation }) {
     }
   }, [isInView]);
 
+  useEffect(() => {
+    if (photoRef.current) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              gsap.to(photoRef.current, {
+                y: 0,
+                autoAlpha: 1,
+                duration: 1,
+                ease: "easeInOut",
+                overwrite: "auto",
+              });
+            } else {
+              gsap.to(photoRef.current, {
+                y: 20,
+                autoAlpha: 0,
+                duration: 1,
+                ease: "easeInOut",
+                overwrite: "auto",
+              });
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        }
+      );
+
+      observer.observe(photoRef.current);
+
+      return () => observer.unobserve(photoRef.current);
+    }
+  }, [photoRef]);
+
   return (
     <div className="mt-40 lg:mt-64">
       <div className="flex justify-between">
         <h2 className="font-gothic font-bold text-lg sm:text-8xl">
-          Enter a Story
+          {/* Title or other content can go here */}
         </h2>
       </div>
-      <ul
-        className="font-SnellRoundhand-Bold text-5xl sm:text-5xl"
-        ref={workRef}
-      >
-        <li
-          onClick={() => handleNavigation("/dreamerica")}
-          style={{
-            borderBottom: `1px solid ${pColor}`,
-            opacity: 0,
-          }}
-          className=" pb-2 mt-16 border-b-1  cursor-pointer "
-        >
-          Dreamerica
-        </li>
+      <ul className="font-gothic font-bold text-5xl sm:text-5xl" ref={workRef}>
         <li
           onClick={() => handleNavigation("/deerkillpark")}
           style={{
@@ -84,6 +108,7 @@ function SelectedWork({ pColor, handleNavigation }) {
           className="pb-2 mt-16 border-b-1 cursor-pointer"
         >
           Deerkill Park
+          <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>(Psychological Mystery)</span>
         </li>
         <li
           onClick={() => handleNavigation("/safecracker")}
@@ -93,7 +118,7 @@ function SelectedWork({ pColor, handleNavigation }) {
           }}
           className="pb-2 mt-16 border-b-1 cursor-pointer"
         >
-          Safecracker
+          Safecracker<span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>(Spec Script Heist Film Based on Podcast)</span>
         </li>
         <li
           onClick={() => handleNavigation("/wando")}
@@ -103,19 +128,8 @@ function SelectedWork({ pColor, handleNavigation }) {
           }}
           className="pb-2 mt-16 border-b-1 cursor-pointer"
         >
-          Wando, Slim, The Light Within
+          Wando, Slim, & The Light Within<span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>(Psychological Animated Adventure)</span>
         </li>
-        <li
-          onClick={() => handleNavigation("/sabrina")}
-          style={{
-            borderBottom: `1px solid ${pColor}`,
-            opacity: 0,
-          }}
-          className="pb-2 mt-16 border-b-1 cursor-pointer"
-        >
-          Sabrina
-        </li>
-
         <li
           onClick={() => handleNavigation("/radiowaydrive")}
           style={{
@@ -124,21 +138,15 @@ function SelectedWork({ pColor, handleNavigation }) {
           }}
           className="pb-2 mt-16 border-b-1 cursor-pointer"
         >
-          Radioway Drive
-        </li>
-        <li
-          onClick={() => handleNavigation("/finishedworks")}
-          style={{
-            borderBottom: `1px solid ${pColor}`,
-            opacity: 0,
-          }}
-          className="pb-2 mt-16 border-b-1 cursor-pointer"
-        >
-          Side Quests
+          Radioway Drive <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>(Psychological Thriller)</span>
         </li>
       </ul>
+      <p className="text-center mt-16 font-gothic font-bold text-5xl italic">
+       I live in Brooklyn, New York and  my favorite genre to write is psychological mysteries. I love movies by David Lynch, Stanley Kubrick, Steven Spielberg, and Paul Thomas Anderson. My favorite television shows are Twin Peaks, The Sopranos, Mad Men, Succession and 30 Rock. My background is in filmmaking, theater, and long form improv. I'm originally from New Jersey and went to the University of Miami, graduating in 2015. I also love baseball, music, and lately, cooking.     
+      </p>
     </div>
   );
 }
 
 export default SelectedWork;
+

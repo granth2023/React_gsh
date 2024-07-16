@@ -1,6 +1,6 @@
 import React from "react";
 
-import DarkSwitch from "./DarkSwitch.js";
+// import DarkSwitch from "./DarkSwitch.js";
 
 import homeicon from "../assests/homeicon.webp";
 
@@ -40,11 +40,11 @@ function Nav({
             className="site-logo h-9 w-9 cursor-pointer rounded-full hover-grow"
           />
         )}
-        <DarkSwitch
+        {/* <DarkSwitch
           modeToggle={modeToggle}
           setModeToggle={setModeToggle}
           pColor={pColor}
-        />
+        /> */}
       </div>
     </div>
   );
