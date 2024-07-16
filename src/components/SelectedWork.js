@@ -149,6 +149,6 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
     </div>
   );
 }
-
+//
 export default SelectedWork;
 
