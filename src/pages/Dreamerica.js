@@ -1,10 +1,6 @@
 import React, { useEffect, useRef } from "react";
-// import { useNavigate } from 'react-router-dom'
 import { ReactComponent as SideArrow } from "../assests/sitesidearrow.svg";
 import { ReactComponent as SideArrow2 } from "../assests/sitesidearrow2.svg";
-
-// import MCCarousel from '../components/MCCarousel'
-// import MCCouple from '../components/MCCouple'
 import { gsap } from "gsap";
 
 function Dreamerica({ modeToggle, pColor, handleNavigation }) {
@@ -14,7 +10,7 @@ function Dreamerica({ modeToggle, pColor, handleNavigation }) {
     const elements = childrenRef.current.children;
     gsap.set(elements, { y: 30, autoAlpha: 0 });
 
-    gsap.to(elements, {
+    const animation = gsap.to(elements, {
       y: 0,
       autoAlpha: 1,
       stagger: 0.4,
@@ -22,13 +18,17 @@ function Dreamerica({ modeToggle, pColor, handleNavigation }) {
       ease: "easeInOut",
       overwrite: "auto",
     });
+
+    return () => {
+      animation.kill();
+    };
   }, []);
 
   return (
     <div
       ref={childrenRef}
       style={{ color: pColor }}
-      className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80  "
+      className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80"
     >
       <h2 className="text-5xl sm:text-8xl font-gothic">Dreamerica</h2>
       <h3 className="text-lg sm:text-2xl font-roadway font-bold mt-12">
@@ -64,16 +64,18 @@ function Dreamerica({ modeToggle, pColor, handleNavigation }) {
             borderBottom: `1px solid ${pColor}`,
           }}
           className="font-gothic text-3xl pb-2 mt-16 border-b-1 cursor-pointer "
-        ></h2>
+        >
+          {/* Add content here if needed */}
+        </h2>
         <div className="flex flex-col font-gothic text-6xl mt-40 mb-40 justify-center items-center leading-snug">
           <div
             onClick={() => handleNavigation("/")}
             className="flex cursor-pointer"
           >
             {modeToggle ? (
-              <SideArrow className="h-10 mt-4 mr-2" />
-            ) : (
               <SideArrow2 className="h-10 mt-4 mr-2" />
+            ) : (
+              <SideArrow className="h-10 mt-4 mr-2" />
             )}
             <h2>Home&emsp;</h2>
           </div>

@@ -54,7 +54,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
     >
       <div className="h-screen flex flex-col justify-center items-center">
         <h3 className="pt-8 text-xs sm:text-6xl text-center font-gothic leading-loose">
-          Welcome to Grant Seth Harris' portfolio.
+          Welcome to Grant Seth Harris's portfolio.
         </h3>
       </div>
       <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:items-start lg:space-x-8">

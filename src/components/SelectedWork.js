@@ -60,7 +60,7 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              gsap.to(photoRef.current, {
+              gsap.to(entry.target, {
                 y: 0,
                 autoAlpha: 1,
                 duration: 1,
@@ -68,7 +68,7 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
                 overwrite: "auto",
               });
             } else {
-              gsap.to(photoRef.current, {
+              gsap.to(entry.target, {
                 y: 20,
                 autoAlpha: 0,
                 duration: 1,
@@ -85,9 +85,10 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
         }
       );
 
-      observer.observe(photoRef.current);
+      const currentPhotoRef = photoRef.current;
+      observer.observe(currentPhotoRef);
 
-      return () => observer.unobserve(photoRef.current);
+      return () => observer.unobserve(currentPhotoRef);
     }
   }, [photoRef]);
 
@@ -95,7 +96,7 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
     <div className="mt-40 lg:mt-64">
       <div className="flex justify-between">
         <h2 className="font-gothic font-bold text-lg sm:text-8xl">
-          {/* Title or other content can go here */}
+          Selected Work
         </h2>
       </div>
       <ul className="font-gothic font-bold text-5xl sm:text-5xl" ref={workRef}>
@@ -108,7 +109,9 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
           className="pb-2 mt-16 border-b-1 cursor-pointer"
         >
           Deerkill Park
-          <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>(Psychological Mystery)</span>
+          <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>
+            (Psychological Mystery)
+          </span>
         </li>
         <li
           onClick={() => handleNavigation("/safecracker")}
@@ -118,7 +121,10 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
           }}
           className="pb-2 mt-16 border-b-1 cursor-pointer"
         >
-          Safecracker<span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>(Spec Script Heist Film Based on Podcast)</span>
+          Safecracker
+          <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>
+            (Spec Script Heist Film Based on Podcast)
+          </span>
         </li>
         <li
           onClick={() => handleNavigation("/wando")}
@@ -128,7 +134,10 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
           }}
           className="pb-2 mt-16 border-b-1 cursor-pointer"
         >
-          Wando, Slim, & The Light Within<span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>(Psychological Animated Adventure)</span>
+          Wando, Slim, & The Light Within
+          <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>
+            (Psychological Animated Adventure)
+          </span>
         </li>
         <li
           onClick={() => handleNavigation("/radiowaydrive")}
@@ -138,17 +147,37 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
           }}
           className="pb-2 mt-16 border-b-1 cursor-pointer"
         >
-          Radioway Drive <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>(Psychological Thriller)</span>
+          Radioway Drive
+          <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>
+            (Psychological Thriller)
+          </span>
+          </li>
+          <li>
+          <p className="text-center mt-16 font-gothic font-bold text-5xl italic">
+         A little about me: 
+          <br />
+          <br />
+        I live in Brooklyn, New York and my favorite genre to write is
+        psychological mysteries.
+        <br />
+        <br />
+        I love movies by David Lynch, Stanley Kubrick, Steven Spielberg, and
+        Paul Thomas Anderson. My favorite television shows are Twin Peaks, The
+        Sopranos, Mad Men, Succession, and 30 Rock.
+        <br />
+        <br />
+        My background is in filmmaking, theater, and long-form improv. I'm
+        originally from New Jersey and went to the University of Miami,
+        graduating in 2015.
+        <br />
+        <br />
+        I also love baseball, music, and lately, cooking.
+      </p>
         </li>
       </ul>
-      <p className="text-center mt-16 font-gothic font-bold text-5xl italic">
-       I live in Brooklyn, New York and  my favorite genre to write is psychological mysteries. 
-       <br /><br />I love movies by David Lynch, Stanley Kubrick, Steven Spielberg, and Paul Thomas Anderson. My favorite television shows are Twin Peaks, The Sopranos, Mad Men, Succession and 30 Rock.     <br /><br /> My background is in filmmaking, theater, and long form improv. I'm originally from New Jersey and went to the University of Miami, graduating in 2015.
-       <br /><br /> I also love baseball, music, and lately, cooking.     
-      </p>
+      
     </div>
   );
 }
-//
-export default SelectedWork;
 
+export default SelectedWork;
