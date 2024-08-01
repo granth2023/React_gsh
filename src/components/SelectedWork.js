@@ -157,7 +157,7 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
          A little about me: 
           <br />
           <br />
-        I live in Brooklyn, New York and my favorite genre to write is
+        I'm a cis bi jew living in Brooklyn, originalyl from New Jersey who loves movies and practices TM. My favorite genre to write is
         psychological mysteries.
         <br />
         <br />
