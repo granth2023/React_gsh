@@ -65,8 +65,8 @@ function Contact({ modetoggle, pColor }) {
         <div style={{ opacity: 0 }} className="flex">
           <a href="mailto:turkeyroll.grant@gmail.com">
             <img
-              src={pidgeon}
-              alt="email"
+              
+              alt="contact"
               className="site-logo h-40 w-40 cursor-pointer rounded-full hover-grow"
             />
           </a>
