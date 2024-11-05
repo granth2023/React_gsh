@@ -32,8 +32,8 @@ function Nav({
           />
         ) : (
           <img
-            src={homeicon}
-            alt="HOME"
+            //src={homeicon}
+            alt="home"
             onClick={() => {
               handleNavigation("/");
             }}
