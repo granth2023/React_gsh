@@ -23,8 +23,8 @@ function Nav({
       >
         {modeToggle ? (
           <img
-            src={homeicon}
-            alt="HOME"
+            //src={homeicon}
+            alt="home"
             onClick={() => {
               handleNavigation("/");
             }}
