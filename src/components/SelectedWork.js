@@ -152,7 +152,7 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
             (Psychological Thriller)
           </span>
           </li>
-          <li>
+          {/* <li>
           <p className="text-center mt-16 font-gothic font-bold text-5xl italic">
          A little about me: 
           <br />
@@ -173,7 +173,7 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
         <br />
         I also love baseball, music, and lately, cooking.
       </p>
-        </li>
+        </li> */}
       </ul>
       
     </div>
