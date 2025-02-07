@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import pidgeon from "../assests/pidgeon.webp";
+// import pidgeon from "../assests/pidgeon.webp";
 import { gsap } from "gsap";
 
 function Contact({ modetoggle, pColor }) {
