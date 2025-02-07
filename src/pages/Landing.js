@@ -49,23 +49,24 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
 
   return (
     <div
-      style={{ color: pColor }}
-      className="mx-6 pt-10 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80"
-    >
-      <div className="h-screen flex flex-col justify-center items-center">
-        <h3 className="pt-8 text-xs sm:text-6xl text-center font-gothic leading-loose">
-          Welcome to Grant Seth Harris's portfolio.
-        </h3>
-      </div>
-      <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:items-start lg:space-x-8">
-        <div ref={landingRef} className="flex-1 flex justify-center">
-          <img
-            src={gshprofilepic}
-            alt="Grant Seth Harris"
-            className="w-full h-auto max-w-xs rounded-full lg:max-w-none lg:rounded-lg"
-          />
-        </div>
-      </div>
+  style={{ color: pColor }}
+  className="mx-4 pt-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-40"
+>
+  <div className="h-[80vh] flex flex-col justify-center items-center">
+    <h3 className="pt-4 text-xs sm:text-4xl text-center font-gothic leading-tight">
+      Welcome to Grant Seth Harris's portfolio.
+    </h3>
+  </div>
+  <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:items-start lg:space-x-6">
+    <div ref={landingRef} className="flex-1 flex justify-center">
+      <img
+        src={gshprofilepic}
+        alt="Grant Seth Harris"
+        className="w-3/4 h-auto max-w-xs rounded-full lg:max-w-sm lg:rounded-lg"
+      />
+    </div>
+  </div>
+
       <SelectedWork
         pColor={pColor}
         handleNavigation={handleNavigation}

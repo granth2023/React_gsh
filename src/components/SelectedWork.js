@@ -100,6 +100,19 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
         </h2>
       </div>
       <ul className="font-gothic font-bold text-5xl sm:text-5xl" ref={workRef}>
+      <li
+          onClick={() => handleNavigation("/deerkillpark")}
+          style={{
+            borderBottom: `1px solid ${pColor}`,
+            opacity: 0,
+          }}
+          className="pb-2 mt-16 border-b-1 cursor-pointer"
+        >
+         Ghostwriter
+          <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>
+            (Mystery Short Film)
+          </span>
+        </li>
         <li
           onClick={() => handleNavigation("/deerkillpark")}
           style={{
