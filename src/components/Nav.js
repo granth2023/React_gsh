@@ -2,7 +2,7 @@ import React from "react";
 
 // import DarkSwitch from "./DarkSwitch.js";
 
-import homeicon from "../assests/homeicon.webp";
+//import homeicon from "../assests/homeicon.webp";
 
 function Nav({
   modeToggle,
