@@ -101,7 +101,7 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
       </div>
       <ul className="font-gothic font-bold text-5xl sm:text-5xl" ref={workRef}>
       <li
-          onClick={() => handleNavigation("/deerkillpark")}
+          onClick={() => handleNavigation("/ghostwriter")}
           style={{
             borderBottom: `1px solid ${pColor}`,
             opacity: 0,
