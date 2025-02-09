@@ -68,60 +68,59 @@ function Ghostwriter({ modeToggle, pColor, handleNavigation }) {
                 />
             </div>
 
-            {/* Timeline Section */}
-            <div id="timeline" className="w-full min-h-screen flex flex-col items-center bg-gray-800 text-white py-20">
-                <h2 className="text-4xl font-bold mb-8">Ghostwriter: Idea to Movie</h2>
+           {/* Timeline Section */}
+<div id="timeline" className="w-full min-h-screen flex flex-col items-center bg-gray-800 text-white py-20 px-4">
+    <h2 className="text-4xl font-bold mb-8 text-center">Ghostwriter: Idea to Movie</h2>
 
-                {/* Horizontal Timeline Bar */}
-                <div className="flex justify-center items-center w-full overflow-x-auto py-6">
-                    <div className="flex space-x-8 items-center">
-                        {milestones.map((step, index) => (
-                            <div key={step.id} className="flex flex-col items-center">
-                                <button 
-                                    className="w-6 h-6 bg-white rounded-full transition transform hover:scale-110"
-                                    onClick={() => scrollToSection(step.id)}
-                                ></button>
-                                <p className="text-sm text-gray-300 mt-2">{step.label}</p>
-                                {index < milestones.length - 1 && <div className="w-12 h-1 bg-white mt-3"></div>}
-                            </div>
-                        ))}
-                    </div>
+    {/* Horizontal Timeline Bar */}
+    <div className="flex justify-center items-center w-full overflow-x-auto whitespace-nowrap py-6 px-2">
+        <div className="flex flex-wrap justify-center space-x-4 md:space-x-8 items-center">
+            {milestones.map((step, index) => (
+                <div key={step.id} className="flex flex-col items-center">
+                    <button 
+                        className="w-6 h-6 bg-white rounded-full transition transform hover:scale-110"
+                        onClick={() => scrollToSection(step.id)}
+                    ></button>
+                    <p className="text-sm text-gray-300 mt-2 text-center">{step.label}</p>
+                    {index < milestones.length - 1 && <div className="w-12 h-1 bg-white mt-3"></div>}
                 </div>
-
-                {/* Timeline Step 1 - Overview */}
-                <div id="overview" ref={timelineRef} className="timeline-step relative flex flex-col items-center text-center w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500  shadow-lg">
-    <h3 className="text-3xl font-semibold text-white">Overview of the Timeline</h3>
-    <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
-        This timeline charts my journey from an idea to a completed film. Each step will dive into the key milestones, challenges, and triumphs that shaped this project.
-    </p>
-
-    {/* Embedded Video */}
-    <div className="mt-4 w-full max-w-xl">
-        <iframe 
-            className="w-full h-64 rounded-lg"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-            title="Overview Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-        ></iframe>
+            ))}
+        </div>
     </div>
 
-    {/* Connecting Line to Next Step */}
-    <div className="w-1 h-16 bg-white my-6"></div>
-                </div>
-                {/* Timeline Step 2 - The Idea */}
-<div id="idea" className="timeline-step relative flex flex-col items-center text-center w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500 shadow-lg">
-    <h3 className="text-3xl font-semibold text-white">The Idea: Shoot an entire movie in one day with one actor!</h3>
-    <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
-        Great, now all I need is a movie idea that fits...
-    </p>
+    {/* Timeline Step - Overview */}
+    <div id="overview" ref={timelineRef} className="timeline-step relative flex flex-col items-center text-center w-full sm:w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500 shadow-lg">
+        <h3 className="text-3xl font-semibold text-white">Overview of the Timeline</h3>
+        <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
+            This timeline charts my journey from an idea to a completed film. Each step will dive into the key milestones, challenges, and triumphs that shaped this project.
+        </p>
 
-    {/* Optionally Add an Image or Video */}
-    {/* <img src="/path-to-image.jpg" alt="The Idea" className="mt-4 rounded-lg w-full max-w-md" /> */}
-    
-    {/* Connecting Line to Next Step */}
-    <div className="w-1 h-16 bg-white my-6"></div>
+        {/* Embedded Video - Responsive */}
+        <div className="mt-4 w-full max-w-xl aspect-video">
+            <iframe 
+                className="w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                title="Overview Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            ></iframe>
+        </div>
+
+        {/* Connecting Line to Next Step */}
+        <div className="w-1 h-16 bg-white my-6"></div>
+    </div>
+
+    {/* Timeline Step - The Idea */}
+    <div id="idea" className="timeline-step relative flex flex-col items-center text-center w-full sm:w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500 shadow-lg">
+        <h3 className="text-3xl font-semibold text-white">The Idea: Shoot an entire movie in one day with one actor!</h3>
+        <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
+            Great, now all I need is a movie idea that fits...
+        </p>
+        <div className="w-1 h-16 bg-white my-6"></div>
+
+
+
 </div>
 {/* Timeline Step 2 - The Idea */}
 <div id="idea" className="timeline-step relative flex flex-col items-center text-center w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500  shadow-lg">
