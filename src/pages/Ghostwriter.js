@@ -33,9 +33,11 @@ function Ghostwriter({ modeToggle, pColor, handleNavigation }) {
         { id: "overview", label: "Overview" },
         { id: "idea", label: "The Idea" },
         { id: "script", label: "Writing the Script" },
-        { id: "filming", label: "Filming" },
-        { id: "editing", label: "Editing" },
-        { id: "release", label: "Premiere" }
+        { id: "prepro", label: "Preproduction" },
+        { id: "pro", label: "Production" },
+        { id: "post", label: "Editing" },
+        { id: "market", label: "Marketing" },
+        { id: "movie", label: "Ghostwriter" }
     ];
 
     return (
@@ -123,8 +125,8 @@ function Ghostwriter({ modeToggle, pColor, handleNavigation }) {
 
 </div>
 {/* Timeline Step 2 - The Idea */}
-<div id="idea" className="timeline-step relative flex flex-col items-center text-center w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500  shadow-lg">
-    <h3 className="text-3xl font-semibold text-white">The Writing</h3>
+<div id="script" className="timeline-step relative flex flex-col items-center text-center w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500  shadow-lg">
+    <h3 className="text-3xl font-semibold text-white"> 10/23 - 11/25: The Writing</h3>
     <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
        From first draft to shooting script
     </p>
@@ -162,6 +164,61 @@ function Ghostwriter({ modeToggle, pColor, handleNavigation }) {
     
     {/* Connecting Line to Next Step */}
     <div className="w-1 h-16 bg-white my-6"></div>
+</div>
+ {/* Timeline Step - The Idea */}
+ <div id="prepro" className="timeline-step relative flex flex-col items-center text-center w-full sm:w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500 shadow-lg">
+        <h3 className="text-3xl font-semibold text-white">11/14 - 12/14: Producing </h3>
+        <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
+            Casting, directing, producing 
+        </p>
+        <div className="w-1 h-16 bg-white my-6"></div>
+
+
+
+</div>
+ {/* Timeline Step - The Idea */}
+ <div id="pro" className="timeline-step relative flex flex-col items-center text-center w-full sm:w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500 shadow-lg">
+        <h3 className="text-3xl font-semibold text-white">12/14: Production </h3>
+        <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
+            Directing & Producing  
+        </p>
+        <div className="w-1 h-16 bg-white my-6"></div>
+
+
+
+</div>
+ {/* Timeline Step - The Idea */}
+ <div id="post" className="timeline-step relative flex flex-col items-center text-center w-full sm:w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500 shadow-lg">
+        <h3 className="text-3xl font-semibold text-white">12/15-2/28: Editing </h3>
+        <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
+            Cutting, Editing, Mixing  
+        </p>
+        <div className="w-1 h-16 bg-white my-6"></div>
+
+
+
+</div>
+{/* Timeline Step - The Idea */}
+<div id="market" className="timeline-step relative flex flex-col items-center text-center w-full sm:w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500 shadow-lg">
+        <h3 className="text-3xl font-semibold text-white">2/6- Now: Marketing </h3>
+        <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
+            Developing, posting, sharing  
+        </p>
+        <div className="w-1 h-16 bg-white my-6"></div>
+
+
+
+</div>
+{/* Timeline Step - The Idea */}
+<div id="movie" className="timeline-step relative flex flex-col items-center text-center w-full sm:w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500 shadow-lg">
+        <h3 className="text-3xl font-semibold text-white">Ghostwriter </h3>
+        <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
+            Starring Holley Sorrels  
+        </p>
+        <div className="w-1 h-16 bg-white my-6"></div>
+
+
+
 </div>
             </div>
         </div>
