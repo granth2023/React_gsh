@@ -14,12 +14,14 @@ function Ghostwriter({ modeToggle, pColor, handleNavigation }) {
     const timelineRef = useRef(null);
 
     useEffect(() => {
-        gsap.from(".timeline-step", {
-            opacity: 0,
-            y: 50,
+        gsap.to(".timeline-step", {
+            opacity: 1,
+            y: 0,
             duration: 1,
+            ease: "power2.out"
         });
     }, []);
+    
 
     // Smooth Scroll Function (Simplified)
     const scrollToSection = (id) => {
@@ -87,7 +89,7 @@ function Ghostwriter({ modeToggle, pColor, handleNavigation }) {
                 </div>
 
                 {/* Timeline Step 1 - Overview */}
-                <div id="overview" ref={timelineRef} className="timeline-step relative flex flex-col items-center text-center w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg shadow-lg">
+                <div id="overview" ref={timelineRef} className="timeline-step relative flex flex-col items-center text-center w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500  shadow-lg">
     <h3 className="text-3xl font-semibold text-white">Overview of the Timeline</h3>
     <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
         This timeline charts my journey from an idea to a completed film. Each step will dive into the key milestones, challenges, and triumphs that shaped this project.
@@ -109,7 +111,7 @@ function Ghostwriter({ modeToggle, pColor, handleNavigation }) {
     <div className="w-1 h-16 bg-white my-6"></div>
                 </div>
                 {/* Timeline Step 2 - The Idea */}
-<div id="idea" className="timeline-step relative flex flex-col items-center text-center w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg shadow-lg">
+<div id="idea" className="timeline-step relative flex flex-col items-center text-center w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500 shadow-lg">
     <h3 className="text-3xl font-semibold text-white">The Idea: Shoot an entire movie in one day with one actor!</h3>
     <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
         Great, now all I need is a movie idea that fits...
@@ -122,14 +124,42 @@ function Ghostwriter({ modeToggle, pColor, handleNavigation }) {
     <div className="w-1 h-16 bg-white my-6"></div>
 </div>
 {/* Timeline Step 2 - The Idea */}
-<div id="idea" className="timeline-step relative flex flex-col items-center text-center w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg shadow-lg">
+<div id="idea" className="timeline-step relative flex flex-col items-center text-center w-3/4 md:w-1/2 p-6 bg-gray-900 rounded-lg border border-gray-500  shadow-lg">
     <h3 className="text-3xl font-semibold text-white">The Writing</h3>
     <p className="mt-4 text-lg text-gray-300 bg-gray-700 p-4 rounded-md">
-       Link to first draft 
+       From first draft to shooting script
     </p>
 
-    {/* Optionally Add an Image or Video */}
-    {/* <img src="/path-to-image.jpg" alt="The Idea" className="mt-4 rounded-lg w-full max-w-md" /> */}
+    {/* Draft Links */}
+    <div className="mt-4 flex flex-col items-center space-y-2">
+        <a 
+            href ="pdfs/ghostwriter1023.pdf"
+            //href="/path-to-draft-1.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-blue-400 hover:text-blue-300 underline"
+        >
+            First Draft - The Initial Concept
+        </a>
+        
+        <a 
+            href="/path-to-draft-2.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-blue-400 hover:text-blue-300 underline"
+        >
+            Second Draft - Major Revisions
+        </a>
+        
+        <a 
+            href="/path-to-draft-3.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-blue-400 hover:text-blue-300 underline"
+        >
+            Final Shooting Script
+        </a>
+    </div>
     
     {/* Connecting Line to Next Step */}
     <div className="w-1 h-16 bg-white my-6"></div>
