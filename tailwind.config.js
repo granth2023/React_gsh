@@ -19,7 +19,8 @@ module.exports = {
         updown: "updown 2s ease-in-out infinite alternate",
       },
       fontFamily: {
-        roadway: ["roadway", "sans-serif"],
+        //roadway: ["roadway", "sans-serif"],
+        courier: ['"Courier New"', 'Courier', 'monospace'],
         gothic: ["gothic", "serif"],
         SnellRoundhand: ["Snell Roundhand", "serif"],
         "SnellRoundhand-Bold": ["Snell Roundhand Bold", "serif"],

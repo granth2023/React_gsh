@@ -93,13 +93,13 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
   }, [photoRef]);
 
   return (
-    <div className="mt-40 lg:mt-64">
-      <div className="flex justify-between">
-        <h2 className="font-gothic font-bold text-lg sm:text-8xl">
-          Selected Work
-        </h2>
-      </div>
-      <ul className="font-gothic font-bold text-5xl sm:text-5xl" ref={workRef}>
+    // <div className="mt-40 lg:mt-64">
+    //   {/* <div className="flex justify-between">
+    //     <h2 className="font-gothic font-bold text-lg sm:text-8xl">
+    //       Turkeys
+    //     </h2>
+    //   </div> */}
+    //   <ul className="font-gothic font-bold text-5xl sm:text-5xl" ref={workRef}>
       <li
           onClick={() => handleNavigation("/ghostwriter")}
           style={{
@@ -108,12 +108,12 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
           }}
           className="pb-2 mt-16 border-b-1 cursor-pointer"
         >
-         Ghostwriter
-          <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>
+        Ghostwriter
+          {/* <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>
             (Mystery Short Film)
-          </span>
+          </span> */}
         </li>
-        <li
+        {/* <li
           onClick={() => handleNavigation("/deerkillpark")}
           style={{
             borderBottom: `1px solid ${pColor}`,
@@ -125,7 +125,7 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
           <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>
             (Psychological Mystery)
           </span>
-        </li>
+        </li> */}
         <li
           onClick={() => handleNavigation("/safecracker")}
           style={{
@@ -136,10 +136,10 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
         >
           Safecracker
           <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>
-            (Spec Script Heist Film Based on Podcast)
+           
           </span>
         </li>
-        <li
+        {/* <li
           onClick={() => handleNavigation("/wando")}
           style={{
             borderBottom: `1px solid ${pColor}`,
@@ -151,7 +151,7 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
           <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>
             (Psychological Animated Adventure)
           </span>
-        </li>
+        </li> */}
         <li
           onClick={() => handleNavigation("/radiowaydrive")}
           style={{
@@ -160,9 +160,9 @@ function SelectedWork({ pColor, handleNavigation, photoRef }) {
           }}
           className="pb-2 mt-16 border-b-1 cursor-pointer"
         >
-          Radioway Drive
-          <span style={{ fontStyle: 'italic', fontSize: '0.75em' }}>
-            (Psychological Thriller)
+          Driveway Radio
+          <span style={{  fontSize: '0.75em' }}>
+            
           </span>
           </li>
           {/* <li>

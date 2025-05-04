@@ -38,7 +38,7 @@ function RadiowayDrive({ modeToggle, pColor, handleNavigation }) {
       className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 "
     >
       <h2 className="text-7xl text-center sm:text-8xl lg:text-8xl xl:text-9xl font-SnellRoundhand-Bold">
-        Radioway Drive
+        Driveway Radio
       </h2>
       <h3 className="text-lg sm:text-5xl text-center font-gothic font-bold italic mt-12">
         Turrrrrnnnn!

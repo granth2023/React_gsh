@@ -3,11 +3,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Bg from "./components/Bg.js";
-import Nav from "./components/Nav.js";
+//import Nav from "./components/Nav.js";
 import Landing from "./pages/Landing.js";
 import Dreamerica from "./pages/Dreamerica.js";
 import Deerkillpark from "./pages/DeerkillPark.js";
-import Ghostwriter from "./pages/Ghostwriter.js";
+import GhostwriterLanding from "./pages/LandingGhostwriter.js";
+//import Ghostwriter from "./pages/Ghostwriter.js";
 // import Safecracker from './pages/Safecracker.js';
 import Wando from "./pages/Wando.js";
 import Sabrina from "./pages/Sabrina.js";
@@ -19,13 +20,13 @@ import React, { useState, useEffect } from "react";
 
 function App() {
   const [modeToggle, setModeToggle] = useState(false);
-  const [pColor, setPColor] = useState("#FFFFFF");
+  const [pColor, setPColor] = useState("#000000");
 
   useEffect(() => {
     if (modeToggle) {
-      setPColor("#F7B69F");
+      setPColor("#000000");
     } else {
-      setPColor("#FFFFFF");
+      setPColor("#000000");
     }
   }, [modeToggle]);
 
@@ -49,12 +50,12 @@ function App() {
   return (
     <div className="App" style={{ position: "relative", zIndex: 1 }}>
       <Bg modeToggle={modeToggle} /> *
-      <Nav
+      {/* <Nav
         modeToggle={modeToggle}
         setModeToggle={setModeToggle}
         handleNavigation={handleNavigation}
         pColor={pColor}
-      />
+      /> */}
       <Routes>
         <Route
           path="/"
@@ -79,9 +80,9 @@ function App() {
           {" "}
         </Route>
         <Route
-          path="/ghostwriter"
+          path="/gw"
           element={
-            <Ghostwriter
+            <GhostwriterLanding
               modeToggle={modeToggle}
               pColor={pColor}
               handleNavigation={handleNavigation}
