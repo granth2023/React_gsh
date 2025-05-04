@@ -19,7 +19,8 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 function App() {
-  const [modeToggle, setModeToggle] = useState(false);
+ // const [modeToggle, setModeToggle] = useState(false);
+ const [modeToggle] = useState(false);
   const [pColor, setPColor] = useState("#000000");
 
   useEffect(() => {
