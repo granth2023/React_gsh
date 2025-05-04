@@ -56,8 +56,9 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
     >
       {/* 🆕 Header above the image */}
       <div className="text-center font-courier text-5xl sm:text-xl md:text-8xl font-extrabold mt-20 mb-10 tracking-tight">
-  GHOSTWRITER
-</div>
+    Turkey Roll Pictures Presents: <br />
+    <span className="underline">GHOSTWRITER</span>
+  </div>
 
       {/* <div className="text-center text-5xl sm:text-xl md:text-8xl font-extrabold mt-20 mb-10 tracking-tight">
 GHOSTWRITER
