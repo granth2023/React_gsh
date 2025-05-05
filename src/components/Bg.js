@@ -10,7 +10,7 @@ function Bg() {
           opacity: 1,
           transition: "ease-in-out all 0.4s",
           position: "fixed",
-          backgroundColor: "#fffcc2", // light yellow background
+          backgroundColor: "#FFEB3B",
         }}
       />
       <div
