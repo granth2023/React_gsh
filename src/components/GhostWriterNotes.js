@@ -56,16 +56,16 @@ Ghostwriter: ???`,
     {
       key: "why",
       title: "Why Ghostwriter (Director's Note)",
-      description: `Where do ideas come from? Recently, I’ve become fascinated with the notion that ideas don’t come from within us, but rather exist ‘out there’. You could call it the world, the universe, the collective unconscious etc. I became so obsessed that I decided I wanted to explore it cinematically.
+      description: `Where do ideas come from? 
+      
+      Recently, I’ve become fascinated with the notion ideas don’t come from within us, but rather exist ‘out there’. You could call it the world, the universe, the collective unconscious etc. I became so fascinated that I decided I wanted to explore it cinematically.
 
-Where do ideas come from? What is writer’s block? Is it simply an inability to conjure up an idea? Or is it more simply ourselves keeping shut a door that if we opened, would let ideas in?`,
+What is writer’s block? Is it an inability to conjure up an idea? Or could it be keeping a door closed that if we opened, would let ideas in? These are some of the questions I hope to raise in this movie and am curious to hear what you think the movie is saying about them.`,
     },
     {
       key: "how",
       title: "How Ghostwriter (Production Note)",
-      description: `Ghostwriter was written within the confines of its arbitrary production requirements: one day, one actor, no dialogue, shot on iPhone. This was seen as a fun creative challenge — and out of it came this movie.
-
-What I love about creating these specific requirements was finding a way to cheat them: SPOILER ALERT — the ghost and emails have dialogue with Holley. I find it fun to create a box and then think outside of it. What fun is it to make rules without then trying to break them?`,
+      description: `Before writing the movie, I came up with some arbitray production requirments: Tell a story that is shot in one day, on an iPhone, with one actor and no verbal dialogue. Within those confines, we made GHOSTWRITER!`,
     },
     {
       key: "contact",
