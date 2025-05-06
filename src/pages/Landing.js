@@ -74,32 +74,27 @@ GHOSTWRITER
         >
           <div
   ref={photoRef}
-  className="w-full max-w-xl sm:max-w-2xl md:max-w-5xl aspect-video rounded-lg overflow-hidden"
+  className="w-full max-w-6xl mx-auto rounded-lg overflow-hidden px-4 sm:px-8"
 >
-<div
-  ref={photoRef}
-  className="w-full max-w-xl sm:max-w-2xl md:max-w-5xl aspect-video rounded-lg overflow-hidden flex justify-center items-center"
->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RzWF-6F-zLU?si=ptAwMbFGj0K1h3LB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+    <iframe
+      className="absolute top-0 left-0 w-full h-full"
+      src="https://www.youtube.com/embed/RzWF-6F-zLU?si=ptAwMbFGj0K1h3LB"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+    />
+  </div>
 </div>
 
-</div>
 
-          {/* <img
-            ref={photoRef}
-            src={turkeyrollpictures}
-            alt="Turkey Roll Pictures"
-            className="w-full max-w-xl sm:max-w-2xl md:max-w-5xl h-auto rounded-full lg:rounded-lg"
-          /> */}
+
+          
         </div>
       </div>
   
-      {/* Welcome Text */}
-      {/* <div className="h-[80vh] flex flex-col justify-center items-center">
-        <h3 className="pt-4 text-lg sm:text-5xl md:text-8xl text-center font-gothic leading-tight">
-          Welcome to the home of Turkey Roll Pictures
-        </h3>
-      </div> */}
   <GhostWriterNotes 
    pColor={pColor}
    handleNavigation={handleNavigation}
