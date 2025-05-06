@@ -5,6 +5,7 @@ import instagramQR from "../assests/turkeyrollpictures_qr.png";
 function GhostWriterNotes({ pColor }) {
   const workRef = useRef(null);
   const [expandedItems, setExpandedItems] = useState({});
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   const toggleExpand = (key) => {
     setExpandedItems((prev) => ({
@@ -15,15 +16,15 @@ function GhostWriterNotes({ pColor }) {
 
   useEffect(() => {
     const element = workRef.current;
-    if (!element) return;
-
+    if (!element || hasAnimated) return;
+  
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const elements = workRef.current.children;
             gsap.set(elements, { x: "100%", autoAlpha: 0 });
-
+  
             gsap.to(elements, {
               x: "0%",
               autoAlpha: 1,
@@ -32,15 +33,19 @@ function GhostWriterNotes({ pColor }) {
               ease: "power2.out",
               overwrite: "auto",
             });
+  
+            setHasAnimated(true); // ✅ prevent re-trigger
+            observer.disconnect(); // ✅ stop observing
           }
         });
       },
       { threshold: 0.5 }
     );
-
+  
     observer.observe(element);
-    return () => observer.unobserve(element);
-  }, []);
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+  
 
   const items = [
     {

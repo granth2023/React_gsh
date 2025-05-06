@@ -55,7 +55,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
       //className="mx-4 pt-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-40"
     >
       {/* 🆕 Header above the image */}
-      <div className="text-center font-courier text-5xl sm:text-xl md:text-8xl font-extrabold mt-20 mb-10 tracking-tight">
+      <div className="text-center font-courier text-5xl sm:text-xl md:text-7xl font-extrabold mt-20 mb-10 tracking-tight">
     Turkey Roll Pictures Presents: <br />
     <span className="underline">GHOSTWRITER</span>
   </div>
@@ -80,16 +80,7 @@ GHOSTWRITER
   ref={photoRef}
   className="w-full max-w-xl sm:max-w-2xl md:max-w-5xl aspect-video rounded-lg overflow-hidden flex justify-center items-center"
 >
-  <iframe
-    width="100%"
-    height="100%"
-    src="https://www.youtube.com/embed/RjpJp_h_bFo"
-    title="YouTube video player"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-    className="w-full h-full"
-  ></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RzWF-6F-zLU?si=ptAwMbFGj0K1h3LB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 </div>
