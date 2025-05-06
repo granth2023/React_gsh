@@ -72,11 +72,11 @@ GHOSTWRITER
           className="flex-1 flex justify-center"
           style={{ marginBottom: "-1rem", marginTop: "5.75rem" }}
         >
-          <div
+   <div
   ref={photoRef}
-  className="w-full max-w-6xl mx-auto rounded-lg overflow-hidden px-4 sm:px-8"
+  className="w-full px-4 sm:px-6 md:px-8 max-w-screen-xl mx-auto"
 >
-  <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+  <div className="relative w-full" style={{ paddingBottom: "56.25%", height: 0 }}>
     <iframe
       className="absolute top-0 left-0 w-full h-full"
       src="https://www.youtube.com/embed/RzWF-6F-zLU?si=ptAwMbFGj0K1h3LB"
@@ -88,6 +88,7 @@ GHOSTWRITER
     />
   </div>
 </div>
+
 
 
 
