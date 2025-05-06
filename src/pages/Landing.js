@@ -37,10 +37,17 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
           className="flex-1 flex justify-center"
           style={{ marginBottom: "-1rem", marginTop: "5.75rem" }}
         >
-       <div className="flex justify-center w-full px-4 sm:px-6 md:px-8">
-  <div className="aspect-w-16 aspect-h-9 w-full max-w-screen-xl">
+      <div className="w-full flex justify-center px-4 sm:px-6 md:px-8">
+  <div
+    className="relative w-full"
+    style={{
+      maxWidth: "1280px",
+      aspectRatio: "16 / 9",
+      minHeight: "200px", // Prevent collapsing on narrow screens
+    }}
+  >
     <iframe
-      className="w-full h-full"
+      className="absolute top-0 left-0 w-full h-full"
       src="https://www.youtube.com/embed/RzWF-6F-zLU?si=w1ShCv8t9sTXjraW"
       title="YouTube video player"
       frameBorder="0"
@@ -50,6 +57,8 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
     />
   </div>
 </div>
+
+
 
         </div>
       </div>
