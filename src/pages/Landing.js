@@ -37,25 +37,20 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
           className="flex-1 flex justify-center"
           style={{ marginBottom: "-1rem", marginTop: "5.75rem" }}
         >
-          <div
-            ref={photoRef}
-            className="w-full px-4 sm:px-6 md:px-8 max-w-screen-xl mx-auto opacity-100 visible"
-          >
-            <div
-              className="relative w-full"
-              style={{ paddingBottom: "56.25%", height: 0 }}
-            >
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/RzWF-6F-zLU?si=ptAwMbFGj0K1h3LB"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
-          </div>
+       <div className="flex justify-center w-full px-4 sm:px-6 md:px-8">
+  <div className="aspect-w-16 aspect-h-9 w-full max-w-screen-xl">
+    <iframe
+      className="w-full h-full"
+      src="https://www.youtube.com/embed/RzWF-6F-zLU?si=w1ShCv8t9sTXjraW"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+    />
+  </div>
+</div>
+
         </div>
       </div>
 
