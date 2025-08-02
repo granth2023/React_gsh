@@ -35,6 +35,13 @@ function HamburgerNav({ handleNavigation }) {
               >
                 Ghostwriter
               </li>
+              {/* <li
+                classname="py-1 hover:underline cursor-pointer"
+                onClick={() => navigateAndClose("/credits")}
+                >
+                Credits
+                </li> */}
+
             </ul>
           </div>
         )}

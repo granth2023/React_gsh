@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Bg from "./components/Bg.js";
+import Credits from './pages/Credits.js';
 //import Nav from "./components/Nav.js";
 import Services from "./pages/Services.js";
 
@@ -64,6 +65,16 @@ function App() {
   path="/"
   element={
     <Services
+      modeToggle={modeToggle}
+      pColor={pColor}
+      handleNavigation={handleNavigation}
+    />
+  }
+/>
+<Route
+  path="/credits"
+  element={
+    <Credits
       modeToggle={modeToggle}
       pColor={pColor}
       handleNavigation={handleNavigation}
