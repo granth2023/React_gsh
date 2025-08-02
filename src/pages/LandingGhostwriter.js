@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import Contact from "../components/Contact.js";
 // Ensure the correct path
 //import turkeyrollpictures from "../assests/turkeyrollpictures.jpeg"
+import HamburgerNav from "../components/HamburgerNav.js";
 
 import { gsap } from "gsap";
 
@@ -52,6 +53,7 @@ function GhostwriterLanding({ modeToggle, pColor, handleNavigation }) {
       style={{ color: pColor }}
       className="mx-4 pt-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-40"
     >
+        <HamburgerNav handleNavigation={handleNavigation} />
       {/* 🆕 Header above the image */}
       <div className="text-center text-5xl sm:text-xl md:text-8xl font-extrabold mt-20 mb-10 tracking-tight">
      Ghostwriter

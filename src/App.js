@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Bg from "./components/Bg.js";
 //import Nav from "./components/Nav.js";
+import Services from "./pages/Services.js";
+
 import Landing from "./pages/Landing.js";
 import Dreamerica from "./pages/Dreamerica.js";
 import Deerkillpark from "./pages/DeerkillPark.js";
@@ -58,8 +60,19 @@ function App() {
         pColor={pColor}
       /> */}
       <Routes>
+      <Route
+  path="/"
+  element={
+    <Services
+      modeToggle={modeToggle}
+      pColor={pColor}
+      handleNavigation={handleNavigation}
+    />
+  }
+/>
+
         <Route
-          path="/"
+          path="/gw"
           element={
             <Landing
               modeToggle={modeToggle}

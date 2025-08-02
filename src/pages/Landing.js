@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import GhostWriterNotes from "../components/GhostWriterNotes.js";
 import { gsap } from "gsap";
+import HamburgerNav from "../components/HamburgerNav.js";
+
+// Inside your component's return:
+
+
 
 function Landing({ modeToggle, pColor, handleNavigation }) {
   const landingRef = useRef(null);
@@ -23,10 +28,12 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
   }, []);
 
   return (
+    
     <div style={{ color: pColor }}>
+        <HamburgerNav handleNavigation={handleNavigation} />
       {/* Header */}
       <div className="text-center font-courier text-5xl sm:text-xl md:text-7xl font-extrabold mt-20 mb-10 tracking-tight">
-        Turkey Roll Pictures Presents: <br />
+        Turkey Roll Pictures Presents TEST: <br />
         <span className="underline">GHOSTWRITER</span>
       </div>
 
