@@ -166,7 +166,7 @@ function Services({ pColor, modeToggle, handleNavigation }) {
 
         {/* 📬 Contact */}
         <div className="mt-32 mb-32 text-left text-xl sm:text-2xl font-light space-y-6 max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold font-courier">📬 Contact</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold font-courier">📬 Contact: Let's talk turkey! </h2>
 
           <div>
             <strong>Email:</strong>{" "}
