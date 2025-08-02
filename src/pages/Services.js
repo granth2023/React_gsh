@@ -56,8 +56,8 @@ function Services({ pColor, modeToggle, handleNavigation }) {
         <div>
           <h3 className="text-2xl font-semibold mb-2">🧭 Mission</h3>
           <p className="text-xl leading-relaxed font-light tracking-wide">
-            It’s simple: serve the story. At every fork in the road, we ask what choice best serves the idea we’re telling.
-            This ensures the story always comes first—guiding us toward its truest, most fully realized form.
+            It’s simple: serve your story. At every fork in the road, we ask what choice best serves the story we’re telling.
+            This ensures we stay true to the original core idea by always putting the story first so we can arrive at its truest, most fully realized form.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ function Services({ pColor, modeToggle, handleNavigation }) {
           {expandedItems["writing"] && (
             <div className="mt-4 space-y-4">
               <p className="text-xl leading-relaxed font-light tracking-wide">
-              Using genre, character, narrative, and dialogue, we build a strong foundation—crafting scripts that are solid, engaging, and built to last in any medium.
+              Using dynamic genre elements, strong characters, engaging narrative, and crisp dialogue, we build you scripts with solid foundations in any medium you need.
               </p>
               <a
                   href="/pdfs/sides.pdf" 
@@ -102,7 +102,7 @@ function Services({ pColor, modeToggle, handleNavigation }) {
           {expandedItems["directing"] && (
             <div className="mt-4 space-y-4">
               <p className="text-xl leading-relaxed font-light tracking-wide">
-              Through blocking, camera placement, improvisation, and action, we transform words into a living, breathing world—one where actors can play and the story comes to life.
+              Through blocking, camera placement, improvisation, and action, we transform your script into a living, breathing world—one where actors can play and your story comes to life.
 
               </p>
               <div className="aspect-w-16 aspect-h-9">
@@ -126,7 +126,7 @@ function Services({ pColor, modeToggle, handleNavigation }) {
           {expandedItems["editing"] && (
             <div className="mt-4 space-y-4">
               <p className="text-xl leading-relaxed font-light tracking-wide">
-              Cutting for story, pacing, subtext, performance, and effects, we shape raw footage into finished cinema that feels intentional and alive.
+              Cutting for story, pacing, subtext, performance, and effects, we shape your raw footage into finished cinema that feels intentional and alive.
 
               </p>
               <div className="aspect-w-16 aspect-h-9">
