@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-function AnimatedSymbolsBackground() {
+function AnimatedBackground() {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -41,4 +41,4 @@ function AnimatedSymbolsBackground() {
   );
 }
 
-export default AnimatedSymbolsBackground;
+export default AnimatedBackground;
