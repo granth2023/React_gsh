@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import AnimatedBackground from "../components/AnimatedBackground.js";
+//import AnimatedBackground from "../components/AnimatedBackground.js";
 
 
 import HamburgerNav from "../components/HamburgerNav.js";
@@ -34,7 +34,7 @@ function Services({ pColor, modeToggle, handleNavigation }) {
 
   return (
     <div className="text-xl sm:text-2xl leading-relaxed" style={{ color: pColor }}>
-        <AnimatedBackground/>
+
 
       <BgServices />
       <HamburgerNav handleNavigation={handleNavigation} />
