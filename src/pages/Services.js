@@ -56,7 +56,7 @@ function Services({ pColor, modeToggle, handleNavigation }) {
         <div>
           <h3 className="text-2xl font-semibold mb-2">🧭 Mission</h3>
           <p className="text-xl leading-relaxed font-light tracking-wide">
-            It’s simple: serve your story. At every fork in the road, we ask what choice best serves the story we’re telling.
+            It’s simple: serve the story. At every fork in the road, we ask what choice best serves the idea and story you want told. 
             This ensures we stay true to the original core idea by always putting the story first so we can arrive at its truest, most fully realized form.
           </p>
         </div>
