@@ -115,7 +115,7 @@ By putting the story first, we stay true to your core idea—guiding it toward i
             <div className="mt-4 space-y-4">
               <p className="text-xl leading-relaxed font-light tracking-wide">
               I’m the missing link.
-I’m a filmmaker who writes, directs, edits, and produces. I’ve written thousands of pages of scripts and led over 20 projects across sketch, film, television, and theater. I’ve edited countless hours of footage and know how to shape a story from the ground up.
+I’m a filmmaker who writes, directs, edits, and produces. I’ve written thousands of pages of scripts and directed/produced over 20 projects across sketch, film, television, and theater. I’ve edited countless hours of footage and know how to shape a story from the ground up.
 
 Through all of it, I’ve learned to ask one key question:
 What best serves the idea?
