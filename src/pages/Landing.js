@@ -33,7 +33,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
         <HamburgerNav handleNavigation={handleNavigation} />
       {/* Header */}
       <div className="text-center font-courier text-5xl sm:text-xl md:text-7xl font-extrabold mt-20 mb-10 tracking-tight">
-        Turkey Roll Pictures Presents TEST: <br />
+        Turkey Roll Pictures Presents: <br />
         <span className="underline">GHOSTWRITER</span>
       </div>
 
