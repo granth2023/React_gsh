@@ -45,7 +45,7 @@ function Services({ pColor, modeToggle, handleNavigation }) {
     creative services
   </div>
   <div className="text-xl sm:text-lg md:text-2xl font-semibold italic mt-4">
-    Building ideas into stories, stories into scripts, scripts into life
+    building ideas into stories, stories into scripts, scripts into life
   </div>
 </div>
 
