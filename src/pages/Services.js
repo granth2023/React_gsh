@@ -39,27 +39,93 @@ function Services({ pColor, modeToggle, handleNavigation }) {
       <BgServices />
       <HamburgerNav handleNavigation={handleNavigation} />
 
-      {/* Header */}
-      <div
-        ref={headerRef}
-        className="text-center font-courier text-5xl sm:text-3xl md:text-6xl font-extrabold mt-20 mb-10 tracking-tight"
-      >
-        creative services
-      </div>
+   {/* Header */}
+<div className="text-center font-courier mt-20 mb-10 tracking-tight">
+  <div className="text-5xl sm:text-3xl md:text-6xl font-extrabold">
+    creative services
+  </div>
+  <div className="text-xl sm:text-lg md:text-2xl font-semibold italic mt-4">
+    Building ideas into stories, stories into scripts, scripts into life
+  </div>
+</div>
+
+
 
       {/* Content Section */}
       <div
         ref={contentRef}
         className="max-w-4xl mx-auto px-6 sm:px-10 md:px-16 lg:px-24 text-lg font-light space-y-10"
       >
+    
         {/* 🧭 Mission */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-2">🧭 Mission</h3>
-          <p className="text-xl leading-relaxed font-light tracking-wide">
-            It’s simple: serve the story. At every fork in the road, we ask what choice best serves the story you want told? By always putting the story first we ensure we stay true to your original core idea so    we can arrive at its truest, most fully realized form.
-          </p>
-        </div>
+ <div className="border-b pb-4" style={{ borderBottom: `1px solid ${pColor}` }}>
+          <div
+            className="flex justify-between items-center cursor-pointer"
+            onClick={() => toggleExpand("mission")}
+          >
+            <h3 className="text-2xl font-semibold"> 🧭 Mission</h3>
+            <span className="text-2xl font-bold">
+              {expandedItems["mission"] ? "−" : "+"}
+            </span>
+          </div>
+          {expandedItems["mission"] && (
+            <div className="mt-4 space-y-4">
+              <p className="text-xl leading-relaxed font-light tracking-wide">
+              It’s simple: we serve your story.
+No matter the medium or stage of the process, we continually ask: What best serves the story we’re trying to tell?
 
+By putting the story first, we stay true to your core idea—guiding it toward its most honest, resonant, and fully realized form.
+              </p>
+             
+            </div>
+          )}
+        </div>
+ {/* 🫵 Who You Are */}
+ <div className="border-b pb-4" style={{ borderBottom: `1px solid ${pColor}` }}>
+          <div
+            className="flex justify-between items-center cursor-pointer"
+            onClick={() => toggleExpand("you")}
+          >
+            <h3 className="text-2xl font-semibold"> 🫵 Who You Are</h3>
+            <span className="text-2xl font-bold">
+              {expandedItems["you"] ? "−" : "+"}
+            </span>
+          </div>
+          {expandedItems["you"] && (
+            <div className="mt-4 space-y-4">
+              <p className="text-xl leading-relaxed font-light tracking-wide">
+              You’re someone who’s said, “That idea would make a great sketch or movie,” or “I should really turn that story into a script”—but for one reason or another, haven’t had the time, tools, or team to bring it to life.
+              </p>
+             
+            </div>
+          )}
+        </div>
+        {/* 🙋‍♂️ Who I Am */}
+ <div className="border-b pb-4" style={{ borderBottom: `1px solid ${pColor}` }}>
+          <div
+            className="flex justify-between items-center cursor-pointer"
+            onClick={() => toggleExpand("me")}
+          >
+            <h3 className="text-2xl font-semibold"> 🙋‍♂️ Who I Am</h3>
+            <span className="text-2xl font-bold">
+              {expandedItems["me"] ? "−" : "+"}
+            </span>
+          </div>
+          {expandedItems["me"] && (
+            <div className="mt-4 space-y-4">
+              <p className="text-xl leading-relaxed font-light tracking-wide">
+              I’m the missing link.
+I’m a filmmaker who writes, directs, edits, and produces. I’ve written thousands of pages of scripts and led over 20 projects across sketch, film, television, and theater. I’ve edited countless hours of footage and know how to shape a story from the ground up.
+
+Through all of it, I’ve learned to ask one key question:
+What best serves the idea?
+
+Together, we’ll take your idea and stay true to it—making thoughtful, story-first decisions at every turn to ensure your vision is realized in its most honest and fully formed version.
+              </p>
+             
+            </div>
+          )}
+        </div>
         {/* ✍️ Writing */}
         <div className="border-b pb-4" style={{ borderBottom: `1px solid ${pColor}` }}>
           <div
