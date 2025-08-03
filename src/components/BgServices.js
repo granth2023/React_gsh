@@ -8,24 +8,29 @@ function BgServices() {
     width: "100%",
     height: "100%",
     zIndex: -1,
-    background: "linear-gradient(-45deg, #c9d6ff, #e2e2ff, #d4c1ec, #c9d6ff)",
-    backgroundSize: "400% 400%",
-    animation: "gradientShift 30s ease infinite",
+    background: "#87CEFA", // Initial color (sky blue)
+    animation: "colorShift 12s ease-in-out infinite",
   };
 
   return (
     <>
       <style>
         {`
-          @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+          @keyframes colorShift {
+            0%   { background-color: #87CEFA; }  /* Sky Blue */
+            25%  { background-color: #B0E0E6; }  /* Powder Blue */
+            50%  { background-color: #D8BFD8; }  /* Thistle (Lilac) */
+            75%  { background-color: #E6E6FA; }  /* Lavender */
+            100% { background-color: #87CEFA; }  /* Back to Sky Blue */
           }
         `}
       </style>
       <div style={{ position: "relative", zIndex: -1 }}>
-        <div id="gradientContainer" className="h-full w-full" style={backgroundStyle} />
+        <div
+          id="gradientContainer"
+          className="h-full w-full"
+          style={backgroundStyle}
+        />
         <div
           id="overlayImageContainer"
           className="h-full w-full"
