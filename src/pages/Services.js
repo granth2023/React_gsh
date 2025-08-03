@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import grantpic from '../assests/grantpic.jpg'
 //import AnimatedBackground from "../components/AnimatedBackground.js";
 
 
@@ -230,50 +231,67 @@ Together, we’ll take your idea and stay true to it—making thoughtful, story-
         </div>
 
         {/* 📬 Contact */}
-        <div className="mt-32 mb-32 text-left text-xl sm:text-2xl font-light space-y-6 max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold font-courier">📬 Contact: Let's talk turkey! </h2>
+<div className="mt-32 mb-32 max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
+  <h2 className="text-3xl sm:text-4xl font-bold font-courier mb-6">
+    📬 Contact: Let's talk turkey!
+  </h2>
 
-          <div>
-            <strong>Email:</strong>{" "}
-            <a
-              href="mailto:turkeyroll.grant@gmail.com"
-              className="underline hover:text-blue-500"
-            >
-              turkeyroll.grant@gmail.com
-            </a>
-          </div>
+  <div className="flex flex-col md:flex-row items-start gap-8">
+    {/* Left: Contact Info */}
+    <div className="flex-1 space-y-4 text-xl sm:text-2xl font-light">
+      <div>
+        <strong>Email:</strong>{" "}
+        <a
+          href="mailto:turkeyroll.grant@gmail.com"
+          className="underline hover:text-blue-500"
+        >
+          turkeyroll.grant@gmail.com
+        </a>
+      </div>
 
-          <div>
-            <strong>YouTube:</strong>{" "}
-            <a
-              href="https://www.youtube.com/@TurkeyRollPictures"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-red-500"
-            >
-              @TurkeyRollPictures
-            </a>
-          </div>
+      <div>
+        <strong>YouTube:</strong>{" "}
+        <a
+          href="https://www.youtube.com/@TurkeyRollPictures"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-red-500"
+        >
+          @TurkeyRollPictures
+        </a>
+      </div>
 
-          <div>
-            <strong>Instagram:</strong>{" "}
-            <a
-              href="https://www.instagram.com/turkeyrollpictures/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-pink-500"
-            >
-              @turkeyrollpictures
-            </a>
-            <div className="mt-4">
-              <img
-                src={instagramQR}
-                alt="Instagram QR Code"
-                className="w-32 h-32 sm:w-40 sm:h-40"
-              />
-            </div>
-          </div>
+      <div>
+        <strong>Instagram:</strong>{" "}
+        <a
+          href="https://www.instagram.com/turkeyrollpictures/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-pink-500"
+        >
+          @turkeyrollpictures
+        </a>
+        <div className="mt-4">
+          <img
+            src={instagramQR}
+            alt="Instagram QR Code"
+            className="w-32 h-32 sm:w-40 sm:h-40"
+          />
         </div>
+      </div>
+    </div>
+
+    {/* Right: Image */}
+    <div className="flex-1 -mt-2 md:-mt-4">
+      <img
+        src={grantpic}
+        alt="Contact Visual"
+        className="rounded-lg shadow-lg w-full object-cover"
+      />
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   );
